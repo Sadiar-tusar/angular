@@ -1,0 +1,11 @@
+{
+   
+    "students":[
+        {
+            "id": 1,
+            "name": "Sadiar",
+            "email": "sadiar.rahman970@gmail.com",
+            "fee": 30000
+        }
+    ]
+}
