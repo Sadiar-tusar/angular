@@ -22,5 +22,9 @@ export class StudentService {
     
   }
 
+  deleteStudent(id:string):Observable<any>{
+    return this.http.delete(this.baseUrl + "/" +id);
+  }
+
 
 }
