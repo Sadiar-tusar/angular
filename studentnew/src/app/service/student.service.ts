@@ -17,7 +17,9 @@ export class StudentService {
   }
 
   saveStudent(student: Student): Observable<any> {
+
     return this.http.post(this.baseUrl, student);
+    
   }
 
 

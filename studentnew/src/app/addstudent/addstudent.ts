@@ -21,11 +21,13 @@ export class Addstudent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
     this.formGroup = this.formBuilder.group({
       name: [''],
       email: [''],
       fee: ['']
     });
+    
   }
 
 
@@ -38,9 +40,10 @@ export class Addstudent implements OnInit {
     this.studentService.saveStudent(student).subscribe({
 
       next: (res) => {
-        console.log(student);
+
+        console.log(res);
         this.formGroup.reset();
-        this.router.navigate(['allstu']);
+        this.router.navigate(['/allstu']);
 
       },
 
@@ -49,7 +52,9 @@ export class Addstudent implements OnInit {
 
       }
 
-    })
+    });
 
   }
+
+
 }
