@@ -37,4 +37,17 @@ export class ViewAllStudent implements OnInit {
 
   }
 
+  getStudentById(id: string): void{
+this.studentservice.getStudentById(id).subscribe({
+
+  next: () => {
+        this.loadAllStudent();
+        this.router.navigate(['/updatestudent',id])
+      },
+      error: (error) => {
+
+      }
+})
+  }
+
 }
