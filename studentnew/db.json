@@ -1,10 +1,16 @@
 {
   "students": [
     {
-      "id": "07c8",
-      "name": "Rohim",
-      "email": "rohim@gmail.com",
-      "fee": "20"
+      "id": "e373",
+      "name": "Atiq",
+      "email": "rakib@gmail.com",
+      "fee": "10000"
+    },
+    {
+      "id": "1e84",
+      "name": "Reza",
+      "email": "reza@gmail.com",
+      "fee": "20000"
     }
   ]
 }
