@@ -1,67 +1,465 @@
-<nav class="bg-white shadow px-6 py-3 flex justify-between items-center">
-  <div class="text-blue-600 text-2xl font-bold">GenInsure</div>
-  <ul class="flex space-x-6 text-gray-700 font-medium">
-    <li><a routerLink="/dashboard" class="hover:text-blue-500">Dashboard</a></li>
-    <li><a routerLink="/clients" class="hover:text-blue-500">Clients</a></li>
-    <li><a routerLink="/policies" class="hover:text-blue-500">Policies</a></li>
-    <li><a routerLink="/claims" class="hover:text-blue-500">Claims</a></li>
-  </ul>
-</nav>
-<!-- side bar -->
- <div class="bg-white shadow-md h-full p-4 rounded-2xl">
-  <h2 class="text-lg font-semibold mb-4">Menu</h2>
-  <ul class="space-y-2 text-gray-700">
-    <li><a routerLink="/dashboard" class="block hover:text-blue-600">Dashboard</a></li>
-    <li><a routerLink="/clients" class="block hover:text-blue-600">Clients</a></li>
-    <li><a routerLink="/policies" class="block hover:text-blue-600">Policies</a></li>
-    <li><a routerLink="/claims" class="block hover:text-blue-600">Claims</a></li>
-    <li><a routerLink="/settings" class="block hover:text-blue-600">Settings</a></li>
-  </ul>
-</div>
+<div id="wrapper">
+  <ul
+    class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+    id="accordionSidebar"
+  >
+    <!-- Sidebar - Brand -->
+    <a
+      class="sidebar-brand d-flex align-items-center justify-content-center"
+      href="index.html"
+    >
+      <div class="sidebar-brand-icon rotate-n-15">
+        <i class="fas fa-building"></i>
+      </div>
+      <div class="sidebar-brand-text mx-3"><i class="fa-solid fa-house"></i> General Insurance Management System </div>
+    </a>
 
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0" />
 
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+      <a class="nav-link" href="dashboard">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span></a
+      >
+    </li>
 
-<router-outlet />
+    <!-- Divider -->
+    <hr class="sidebar-divider" />
 
-<footer class="pt-4">
-  <div class="w-full px-6 mx-auto">
-    <div class="flex flex-wrap items-center -mx-3 lg:justify-between">
-      <div class="w-full max-w-full px-3 mt-0 mb-6 shrink-0 lg:mb-0 lg:w-1/2 lg:flex-none">
-        <div class="text-sm leading-normal text-center text-slate-500 lg:text-left">
-          ©
-          <script>
-            document.write(new Date().getFullYear() + ",");
-          </script>
-          made with <i class="fa fa-heart"></i> by
-          <a href="https://www.creative-tim.com" class="font-semibold text-slate-700 dark:text-white"
-            target="_blank">Creative Tim</a>
-          for a better web.
+    <!-- Heading -->
+    <div class="sidebar-heading">Core</div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+      <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseTwo"
+        aria-expanded="true"
+        aria-controls="collapseTwo"
+      >
+        <i class="fa fa-building"></i>
+        <span>Constructions</span>
+      </a>
+      <div
+        id="collapseTwo"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+      >
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" href="projects">Projects</a>
+          <a class="collapse-item" href="buildings">Buildings</a>
+          <a class="collapse-item" href="floors">Floors</a>
+          <a class="collapse-item" href="units">Units</a>
+          <a class="collapse-item" href="rawmaterials">Raw Materials</a>
         </div>
       </div>
-      <div class="w-full max-w-full px-3 mt-0 shrink-0 lg:w-1/2 lg:flex-none">
-        <ul class="flex flex-wrap justify-center pl-0 mb-0 list-none lg:justify-end">
-          <li class="nav-item">
-            <a href="https://www.creative-tim.com"
-              class="block px-4 pt-0 pb-1 text-sm font-normal transition-colors ease-in-out text-slate-500"
-              target="_blank">Creative Tim</a>
+    </li>
+
+    <div class="sidebar-heading">HR</div>
+
+    <li class="nav-item">
+      <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseOne"
+        aria-expanded="true"
+        aria-controls="collapseOne"
+      >
+        <i class="fas fa-fingerprint"></i>
+        <span>Human Resources</span>
+      </a>
+      <div
+        id="collapseOne"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+      >
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" href="">Projects</a>
+          <a class="collapse-item" href="">Buildings</a>
+          <a class="collapse-item" href="">Floors</a>
+          <a class="collapse-item" href="">Units</a>
+          <a class="collapse-item" href="">Raw Materials</a>
+        </div>
+      </div>
+    </li>
+    <div class="sidebar-heading">Accountings</div>
+
+    <li class="nav-item">
+      <a
+        class="nav-link collapsed"
+        href="#"
+        data-toggle="collapse"
+        data-target="#collapseThree"
+        aria-expanded="true"
+        aria-controls="collapseThree"
+      >
+        <i class="fas fa-fingerprint"></i>
+        <span>Accountings</span>
+      </a>
+      <div
+        id="collapseThree"
+        class="collapse"
+        aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar"
+      >
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" href="">Earnings</a>
+          <a class="collapse-item" href="">Costings</a>
+        </div>
+      </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block" />
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+      <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+  </ul>
+  <div id="content-wrapper" class="d-flex flex-column">
+    <!-- Main Content -->
+    <div id="content">
+      <nav
+        class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+      >
+        <!-- Sidebar Toggle (Topbar) -->
+        <button
+          id="sidebarToggleTop"
+          class="btn btn-link d-md-none rounded-circle mr-3"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- Topbar Search -->
+        <form
+          class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"
+        >
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control bg-light border-0 small"
+              placeholder="Search for..."
+              aria-label="Search"
+              aria-describedby="basic-addon2"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">
+                <i class="fas fa-search fa-sm"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Topbar Navbar -->
+        <ul class="navbar-nav ml-auto">
+          <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+          <li class="nav-item dropdown no-arrow d-sm-none">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="searchDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-search fa-fw"></i>
+            </a>
+            <!-- Dropdown - Messages -->
+            <div
+              class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+              aria-labelledby="searchDropdown"
+            >
+              <form class="form-inline mr-auto w-100 navbar-search">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control bg-light border-0 small"
+                    placeholder="Search for..."
+                    aria-label="Search"
+                    aria-describedby="basic-addon2"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                      <i class="fas fa-search fa-sm"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </li>
-          <li class="nav-item">
-            <a href="https://www.creative-tim.com/presentation"
-              class="block px-4 pt-0 pb-1 text-sm font-normal transition-colors ease-in-out text-slate-500"
-              target="_blank">About Us</a>
+
+          <!-- Nav Item - Alerts -->
+          <li class="nav-item dropdown no-arrow mx-1">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="alertsDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-bell fa-fw"></i>
+              <!-- Counter - Alerts -->
+              <span class="badge badge-danger badge-counter">3+</span>
+            </a>
+            <!-- Dropdown - Alerts -->
+            <div
+              class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+              aria-labelledby="alertsDropdown"
+            >
+              <h6 class="dropdown-header">Alerts Center</h6>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="mr-3">
+                  <div class="icon-circle bg-primary">
+                    <i class="fas fa-file-alt text-white"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="small text-gray-500">December 12, 2019</div>
+                  <span class="font-weight-bold"
+                    >A new monthly report is ready to download!</span
+                  >
+                </div>
+              </a>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="mr-3">
+                  <div class="icon-circle bg-success">
+                    <i class="fas fa-donate text-white"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="small text-gray-500">December 7, 2019</div>
+                  $290.29 has been deposited into your account!
+                </div>
+              </a>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="mr-3">
+                  <div class="icon-circle bg-warning">
+                    <i class="fas fa-exclamation-triangle text-white"></i>
+                  </div>
+                </div>
+                <div>
+                  <div class="small text-gray-500">December 2, 2019</div>
+                  Spending Alert: We've noticed unusually high spending for your
+                  account.
+                </div>
+              </a>
+              <a class="dropdown-item text-center small text-gray-500" href="#"
+                >Show All Alerts</a
+              >
+            </div>
           </li>
-          <li class="nav-item">
-            <a href="https://creative-tim.com/blog"
-              class="block px-4 pt-0 pb-1 text-sm font-normal transition-colors ease-in-out text-slate-500"
-              target="_blank">Blog</a>
+
+          <!-- Nav Item - Messages -->
+          <li class="nav-item dropdown no-arrow mx-1">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="messagesDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fas fa-envelope fa-fw"></i>
+              <!-- Counter - Messages -->
+              <span class="badge badge-danger badge-counter">7</span>
+            </a>
+            <!-- Dropdown - Messages -->
+            <div
+              class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+              aria-labelledby="messagesDropdown"
+            >
+              <h6 class="dropdown-header">Message Center</h6>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="dropdown-list-image mr-3">
+                  <img
+                    class="rounded-circle"
+                    src="img/undraw_profile_1.svg"
+                    alt="..."
+                  />
+                  <div class="status-indicator bg-success"></div>
+                </div>
+                <div class="font-weight-bold">
+                  <div class="text-truncate">
+                    Hi there! I am wondering if you can help me with a problem
+                    I've been having.
+                  </div>
+                  <div class="small text-gray-500">Emily Fowler · 58m</div>
+                </div>
+              </a>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="dropdown-list-image mr-3">
+                  <img
+                    class="rounded-circle"
+                    src="img/undraw_profile_2.svg"
+                    alt="..."
+                  />
+                  <div class="status-indicator"></div>
+                </div>
+                <div>
+                  <div class="text-truncate">
+                    I have the photos that you ordered last month, how would you
+                    like them sent to you?
+                  </div>
+                  <div class="small text-gray-500">Jae Chun · 1d</div>
+                </div>
+              </a>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="dropdown-list-image mr-3">
+                  <img
+                    class="rounded-circle"
+                    src="img/undraw_profile_3.svg"
+                    alt="..."
+                  />
+                  <div class="status-indicator bg-warning"></div>
+                </div>
+                <div>
+                  <div class="text-truncate">
+                    Last month's report looks great, I am very happy with the
+                    progress so far, keep up the good work!
+                  </div>
+                  <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                </div>
+              </a>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <div class="dropdown-list-image mr-3">
+                  <img
+                    class="rounded-circle"
+                    src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                    alt="..."
+                  />
+                  <div class="status-indicator bg-success"></div>
+                </div>
+                <div>
+                  <div class="text-truncate">
+                    Am I a good boy? The reason I ask is because someone told me
+                    that people say this to all dogs, even if they aren't
+                    good...
+                  </div>
+                  <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                </div>
+              </a>
+              <a class="dropdown-item text-center small text-gray-500" href="#"
+                >Read More Messages</a
+              >
+            </div>
           </li>
-          <li class="nav-item">
-            <a href="https://www.creative-tim.com/license"
-              class="block px-4 pt-0 pb-1 pr-0 text-sm font-normal transition-colors ease-in-out text-slate-500"
-              target="_blank">License</a>
+
+          <div class="topbar-divider d-none d-sm-block"></div>
+
+
+
+          <!-- Nav Item - User Information -->
+          <li class="nav-item dropdown no-arrow">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="userDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span class="mr-2 d-none d-lg-inline text-gray-600 small"
+                >Sadiar Rahman</span
+              >
+              <img
+                class="img-profile rounded-circle"
+                src="img/undraw_profile.svg"
+              />
+            </a>
+            <!-- Dropdown - User Information -->
+            <div
+              class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+              aria-labelledby="userDropdown"
+            >
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                Profile
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                Settings
+              </a>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                Activity Log
+              </a>
+              <div class="dropdown-divider"></div>
+              <a
+                class="dropdown-item"
+                href="#"
+                data-toggle="modal"
+                data-target="#logoutModal"
+              >
+                <i
+                  class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
+                ></i>
+                Logout
+              </a>
+            </div>
           </li>
         </ul>
+      </nav>
+      <router-outlet />
+      <div
+        class="modal fade"
+        id="logoutModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        style="display: none"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Ready to Leave?
+              </h5>
+              <button
+                class="close"
+                type="button"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Select "Logout" below if you are ready to end your current
+              session.
+            </div>
+            <div class="modal-footer">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <a class="btn btn-primary" href="login.html">Logout</a>
+            </div>
+          </div>
+        </div>
       </div>
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright © Real Estate 2025</span>
+          </div>
+        </div>
+      </footer>
     </div>
   </div>
-</footer>
+</div>
