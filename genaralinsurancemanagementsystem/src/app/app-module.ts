@@ -5,12 +5,20 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Home } from './component/home/home';
 import { Dashboard } from './component/dashboard/dashboard';
+import { Login } from './login/login';
+import { Logout } from './logout/logout';
+import { Registration } from './registration/registration';
+import { Userprofile } from './userprofile/userprofile';
 
 @NgModule({
   declarations: [
     App,
     Home,
-    Dashboard
+    Dashboard,
+    Login,
+    Logout,
+    Registration,
+    Userprofile
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,23 @@
+{
+ "policies": [
+    {
+      "id": "POL123456",
+      "policyType": "Health",
+      "policyHolder": "Rahim Uddin",
+    "details": {
+        "healthNumber": "HLT-987654",
+        "vehicleNumber": null
+      },
+      "coverageAmount": 500000,
+      "premiumAmount": 2000,
+      "premiumFrequency": "Monthly",
+      "startDate": "2024-01-01",
+      "endDate": "2025-01-01",
+      "status": "Active",
+      "inclusions": ["Hospitalization", "Accidental Injury"],
+      "exclusions": ["Pre-existing Conditions", "Cosmetic Surgery"],
+      "beneficiary": "Rahim's Wife",
+      "previousClaims": false
+    }
+  ]
+}

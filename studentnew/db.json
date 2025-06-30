@@ -4,25 +4,24 @@
       "id": "e373",
       "name": "Atiq",
       "email": "rakib@gmail.com",
-      "fee": "10000"
-    },
+      "fee": "10000",
+      "location": 
     {
-      "id": "1e84",
-      "name": "Reza",
-      "email": "reza@gmail.com",
-      "fee": "20000"
-    },
+      "id": "1",
+      "name": "Dhaka",
+      "email":"",
+      "photo": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrj9ytdR3wo0cXcWe64BouwgfjT-eBSefsuONFY5Q08Q-Ds29xz2_DOHzVmOnMQJVvauMkcQWV7IZxZWMmTbSOtS-5qEpYV8YNm1MXhp1dnSJbCLDpCrfV8Kd9aZNC5DW0kRP4=s294-w294-h220-k-no"
+    }
+  
+    }
+   
+  ],
+  "locations":[
     {
-      "id": "b6c9",
-      "name": "Eiasin",
-      "email": "eiasin@gmail.com",
-      "fee": "29999"
-    },
-    {
-      "id": "0b09",
-      "name": "Sadiar",
-      "email": "sfsdfg@vbjh.fsfh",
-      "fee": "40000"
+      "id":"1",
+      "name":"Dhaka",
+      "photo":"https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrj9ytdR3wo0cXcWe64BouwgfjT-eBSefsuONFY5Q08Q-Ds29xz2_DOHzVmOnMQJVvauMkcQWV7IZxZWMmTbSOtS-5qEpYV8YNm1MXhp1dnSJbCLDpCrfV8Kd9aZNC5DW0kRP4=s294-w294-h220-k-no"
     }
   ]
+  
 }
