@@ -1,5 +1,6 @@
-export class Location{
-    id !: number;
+export class Location {
+
+    id !: string;
     name !: string;
     photo !: string;
 }
