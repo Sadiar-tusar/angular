@@ -15,5 +15,5 @@ export class Policy{
   beneficiary?: string;
   details?: string;
   hasPreviousClaims?: boolean;
-}
 
+}

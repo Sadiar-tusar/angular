@@ -19,5 +19,14 @@
       "beneficiary": "Rahim's Wife",
       "previousClaims": false
     }
+  ],
+   "user": [
+    {
+      "id": "dbf7",
+      "name": "Muhammad Emran Hossain",
+      "email": "hsstanvir@gmail.com",
+      "password": "123456",
+      "photo": "https://tinyurl.com/6dt7txrj"
+    }
   ]
 }
