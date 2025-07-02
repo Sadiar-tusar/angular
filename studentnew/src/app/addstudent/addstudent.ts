@@ -37,8 +37,28 @@ export class Addstudent implements OnInit {
     name:[''],
     photo:['']
     })
-  })
+  });
+
+  this.loadLocation();
+
+  this.formGroup.get('location')?.get('name')?.valueChanges.subscribe(name=>{
+    const selectedLocation= this.locations.find(loc => loc.name===name);
+    if(selectedLocation){
+      this.formGroup.patchValue({location: selectedLocation});
+    }
+  });
     
+  }
+
+  loadLocation(): void{
+    this.locationService.getAllLocation().subscribe({
+      next:(loc)=>{
+        this.locations=loc;
+      },
+      error:(error)=>{
+        console.log(error);
+      }
+    });
   }
 
 
@@ -46,20 +66,25 @@ export class Addstudent implements OnInit {
 
   addStudent(): void {
 
+    if(this.formGroup.invalid){
+      return;
+    }
+
     const student: Student = { ...this.formGroup.value };
 
     this.studentService.saveStudent(student).subscribe({
 
       next: (res) => {
 
-        console.log(res);
+        console.log("Student Saved",res);
+        this.loadLocation();
         this.formGroup.reset();
         this.router.navigate(['/allstu']);
 
       },
 
       error: (error) => {
-        console.log(error);
+        console.log("Error Saving Student",error);
 
       }
 
