@@ -1,80 +1,23 @@
-<div class="modal-body">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-12">
-                    <div class="form-group">
-                        <label class="text-left">First Name</label>
-                        <input type="text" class="form-control registration-form-fld" name="firstname" id="firstname"
-                            placeholder="First Name As Per NID or Passport" />
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-12">
-                    <div class="form-group">
-                        <label class="text-left">Last Name</label>
-                        <input type="text" class="form-control registration-form-fld" name="lastname" id="lastname"
-                            placeholder="Last Name As Per NID or Passpor" />
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-12">
-                    <div class="form-group">
-                        <label class="text-left">Mobile Number</label>
-                        <input type="number" class="form-control registration-form-fld" name="userphone" id="userphone"
-                            placeholder="Your Phone Number" />
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-12">
-                    <div class="form-group">
-                        <label class="text-left">Email</label>
-                        <input type="email" class="form-control registration-form-fld" name="useremail" id="useremail"
-                            placeholder="Your Email *" />
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-12">
-                    <div class="form-group">
-                        <label class="text-left">NID</label>
-                        <input type="number" class="form-control registration-form-fld" name="usernid" id="usernid"
-                            placeholder="Your NID Number" />
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-12">
-                    <div class="form-group">
-                        <label class="text-left">Date of Birth</label>
-                        <input type="date" class="form-control date_of_birth registration-form-fld" name="date_of_birth"
-                            id="date_of_birth" readonly>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-12">
-                    <div class="form-group">
-                        <label class="text-left">Password</label>
-                        <input type="password" class="form-control registration-form-fld" name="userpassword"
-                            id="userpassword" placeholder="Your Password" />
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-12">
-                    <div class="form-group">
-                        <label class="text-left">Confirm Password</label>
-                        <input type="password" class="form-control registration-form-fld" name="userconfirmpassword"
-                            id="userconfirmpassword" placeholder="Confirm Password" />
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-12">
-                    <div class="form-group">
-                        <div class="g-recaptcha" data-sitekey="6LeiWugpAAAAAB84Rt9pz5yr2IyisXiZTinvb8hU"></div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-12">
-                    <div class="form-group">
-                        <input type="submit" class="product-btn useRegistration" name="useRegistration"
-                            id="useRegistration" value="Registration" />
-                    </div>
-                </div>
-                <!--<div class="col-md-6 col-sm-6 col-12">
-												<div class="form-group">
-													<a href="/gdidev/login" class="product-btn getMotorQuoteButton">Login</a>
-												</div>
-											</div>-->
-            </div>
-        </div>
-    </div>
-</div>
+<div class="container">
+    <h2>Register</h2>
+    <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" formControlName="name" class="form-control" required="required">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" formControlName="email" class="form-control" required="required">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" formControlName="password" class="form-control" required="required">
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Photo</label>
+        <input type="text" id="password" formControlName="photo" class="form-control" required="required">
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+  </div>
+  
