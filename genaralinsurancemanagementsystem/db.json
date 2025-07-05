@@ -13,9 +13,7 @@
       "startDate": "2024-01-01",
       "endDate": "2025-01-01",
       "status": "Active",
-      "inclusions": {
-        "id": "dbf7"
-      },
+      "inclusions": "Accidental Injury",
       "exclusions": [
         "Pre-existing Conditions",
         "Cosmetic Surgery"
@@ -39,6 +37,22 @@
       "password": "1234",
       "photo": "https://media.istockphoto.com/id/479009182/photo/silhouette-of-a-strong-fighter.jpg?s=612x612&w=0&k=20&c=eqC_1o48WNIxNZIyJrHl8nDLmYC7RtSKq1lJVmDS9GU=",
       "role": "user"
+    },
+    {
+      "id": "81a1",
+      "name": "Sadiar Rahman",
+      "email": "sadiar@gmail.com",
+      "password": "12345678",
+      "photo": "https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg",
+      "role": "user"
+    },
+    {
+      "id": "85b7",
+      "name": "llllllllll",
+      "email": "lllllllll@gmail.com",
+      "password": "9090",
+      "photo": "https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg",
+      "role": "user"
     }
   ],
   "details": [
@@ -50,11 +64,11 @@
   ],
   "inclusion": [
     {
-      "id":"dbf7",
+      "id": "dbf7",
       "name": "Hospitalization"
     },
     {
-      "id":"dbf7",
+      "id": "dbf7",
       "name": "Accidental Injury"
     }
   ]
