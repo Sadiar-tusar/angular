@@ -5,13 +5,15 @@ import { Dashboard } from './component/dashboard/dashboard';
 import { Registration } from './component/auth/registration/registration';
 import { Login } from './component/auth/login/login';
 import { Userprofile } from './component/auth/userprofile/userprofile';
+import { Showallhealthpolicy } from './component/health/showallhealthpolicy/showallhealthpolicy';
 
 const routes: Routes = [
   {path:'',component: Home},
   {path:'dashboard', component:Dashboard},
   {path:'reg', component: Registration},
   {path:'login', component: Login},
-  {path:'userProfile', component: Userprofile}
+  {path:'userProfile', component: Userprofile},
+  {path:'updatepolicy', component: Showallhealthpolicy},
 
 ];
 

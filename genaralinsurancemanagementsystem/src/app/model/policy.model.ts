@@ -1,19 +1,20 @@
 export class Policy{
 
-     policyNumber !: string;
-  policyType !: 'Health' | 'Car' | 'Fire' | 'Travel' | 'Marine';
-  policyHolderId !: number;
-  relatedAssetInfo?: string;
-  coverageAmount !: number;
-  premiumAmount !: number;
-  premiumFrequency !: 'Monthly' | 'Quarterly' | 'Annually';
-  startDate !: Date;
-  endDate !: Date;
-  status !: 'Active' | 'Expired' | 'Cancelled';
-  inclusions !: string;
-  exclusions !: string;
-  beneficiary?: string;
-  details?: string;
-  hasPreviousClaims?: boolean;
+     id!: string;
+  billNo!: number;
+  date!: string;
+  bankName!: string;
+  policyholder!: string;
+  address!: string;
+  stockInsured!: string;
+  sumInsured!: number;
+  interestInsured!: string;
+  coverage!: string;
+  location!: string;
+  construction!: string;
+  owner!: string;
+  usedAs!: string;
+  periodFrom!: string;
+  periodTo!: string;
 
 }

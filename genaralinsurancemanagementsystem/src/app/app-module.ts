@@ -11,6 +11,9 @@ import { Registration } from './component/auth/registration/registration';
 import { Login } from './component/auth/login/login';
 import { Logout } from './component/auth/logout/logout';
 import { Userprofile } from './component/auth/userprofile/userprofile';
+import { Showallhealthpolicy } from './component/health/showallhealthpolicy/showallhealthpolicy';
+import { Addhealthpolicy } from './component/health/addhealthpolicy/addhealthpolicy';
+import { Updatehealthpolicy } from './component/health/updatehealthpolicy/updatehealthpolicy';
 
 
 
@@ -22,7 +25,10 @@ import { Userprofile } from './component/auth/userprofile/userprofile';
     Registration,
     Login,
     Logout,
-    Userprofile
+    Userprofile,
+    Showallhealthpolicy,
+    Addhealthpolicy,
+    Updatehealthpolicy
     
   ],
   imports: [

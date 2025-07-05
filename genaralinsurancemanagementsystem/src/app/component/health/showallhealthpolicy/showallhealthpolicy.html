@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="p-4">
+        <h2 class="text-xl font-bold mb-4">Health Insurance Policies</h2>
+        <button routerLink="/health/add" class="bg-blue-500 text-white px-4 py-2 mb-4 rounded">Add Policy</button>
+
+        <table class="table table striped w-full border">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th>ID</th>
+                    <th>Holder</th>
+                    <th>Sum Insured</th>
+                    <th>Premium</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let policy of policies">
+                    <td>{{ policy.policyId }}</td>
+                    <td>{{ policy.policyHolderName }}</td>
+                    <td>{{ policy.sumInsured }}</td>
+                    <td>{{ policy.premiumAmount }}</td>
+                    <td>
+                        <!-- <button (click)="viewPolicy(policy.policyId)" class="text-blue-600">View</button> | -->
+                        <button (click)="getPolicyById(policy.policyId)" class="text-yellow-600">Edit</button> |
+                        <button (click)="deletePolicy(policy.policyId)" class="text-red-600">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
