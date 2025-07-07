@@ -1,6 +1,7 @@
 {
   "policies": [
-    { "billNo": 1001,
+    {
+      "billNo": 1001,
       "date": "2024-09-01",
       "bankName": "Islami Bank Bangladesh PLC, Dhanmondi Branch, Dhaka",
       "policyholder": "Kacci Bhai Restaurants , Prop: Md. Raju Chowdhury  ",
@@ -68,49 +69,254 @@
       "name": "Accidental Injury"
     }
   ],
-
-  "healthinsurancepolicy":[
+  "healthinsurancepolicy": [
     {
-  "policyId": "H-001",
-  "policyHolderName": "Rahim Uddin",
-  "age": 35,
-  "gender": "Male",
-  "policyType": "Individual",
-  "sumInsured": 500000,
-  "premiumAmount": 7500,
-  "policyStartDate": "2025-01-01",
-  "policyEndDate": "2026-01-01",
-  "preExistingDiseases": ["Diabetes"],
-  "hospitalNetwork": ["Apollo", "Square", "United"],
-  "coverageDetails": {
-    "hospitalization": true,
-    "preHospitalizationDays": 30,
-    "postHospitalizationDays": 60,
-    "maternityCoverage": false,
-    "ambulanceChargesCovered": true,
-    "criticalIllnessCoverage": true,
-    "covidCoverage": true,
-    "annualHealthCheckup": true
-  },
-  "exclusions": ["Cosmetic Surgery", "Dental Treatment"],
-  "nomineeName": "Sharmin Akter",
-  "nomineeRelation": "Wife",
-  "contactNumber": "017XXXXXXXX",
-  "email": "rahim@example.com",
-  "address": "Mirpur, Dhaka"
-}
-
+      "policyId": "H-001",
+      "policyHolderName": "Rahim Uddin",
+      "age": 35,
+      "gender": "Male",
+      "policyType": "Individual",
+      "sumInsured": 500000,
+      "premiumAmount": 7500,
+      "policyStartDate": "2025-01-01",
+      "policyEndDate": "2026-01-01",
+      "preExistingDiseases": [
+        "Diabetes"
+      ],
+      "hospitalNetwork": [
+        "Apollo",
+        "Square",
+        "United"
+      ],
+      "coverageDetails": {
+        "hospitalization": true,
+        "preHospitalizationDays": 30,
+        "postHospitalizationDays": 60,
+        "maternityCoverage": false,
+        "ambulanceChargesCovered": true,
+        "criticalIllnessCoverage": true,
+        "covidCoverage": true,
+        "annualHealthCheckup": true
+      },
+      "exclusions": [
+        "Cosmetic Surgery",
+        "Dental Treatment"
+      ],
+      "nomineeName": "Sharmin Akter",
+      "nomineeRelation": "Wife",
+      "contactNumber": "017XXXXXXXX",
+      "email": "rahim@example.com",
+      "address": "Mirpur, Dhaka",
+      "id": "6c0d"
+    },
+    {
+      "id": "2658",
+      "policyId": "fsf3r",
+      "policyHolderName": "sadiar",
+      "age": 0,
+      "gender": "Male",
+      "policyType": "Individual",
+      "sumInsured": 50000,
+      "premiumAmount": 500,
+      "policyStartDate": "2025-07-05T15:33:24.577Z",
+      "policyEndDate": "2025-07-05T15:33:24.577Z",
+      "preExistingDiseases": [],
+      "hospitalNetwork": [],
+      "coverageDetails": {
+        "hospitalization": true,
+        "preHospitalizationDays": 30,
+        "postHospitalizationDays": 60,
+        "maternityCoverage": false,
+        "ambulanceChargesCovered": true,
+        "criticalIllnessCoverage": true,
+        "covidCoverage": true,
+        "annualHealthCheckup": false
+      },
+      "exclusions": [],
+      "nomineeName": "",
+      "nomineeRelation": "",
+      "contactNumber": "",
+      "email": "",
+      "address": ""
+    },
+    {
+      "id": "9e8b",
+      "policyId": "fsf3r",
+      "policyHolderName": "sadiar",
+      "age": 0,
+      "gender": "Male",
+      "policyType": "Individual",
+      "sumInsured": 50000,
+      "premiumAmount": 500,
+      "policyStartDate": "2025-07-05T15:33:24.577Z",
+      "policyEndDate": "2025-07-05T15:33:24.577Z",
+      "preExistingDiseases": [],
+      "hospitalNetwork": [],
+      "coverageDetails": {
+        "hospitalization": true,
+        "preHospitalizationDays": 30,
+        "postHospitalizationDays": 60,
+        "maternityCoverage": false,
+        "ambulanceChargesCovered": true,
+        "criticalIllnessCoverage": true,
+        "covidCoverage": true,
+        "annualHealthCheckup": false
+      },
+      "exclusions": [],
+      "nomineeName": "",
+      "nomineeRelation": "",
+      "contactNumber": "",
+      "email": "",
+      "address": ""
+    },
+    {
+      "id": "c057",
+      "policyId": "628hdg",
+      "policyHolderName": "reja",
+      "age": 0,
+      "gender": "Male",
+      "policyType": "Individual",
+      "sumInsured": 900000,
+      "premiumAmount": 6000,
+      "policyStartDate": "2025-07-05T15:36:18.338Z",
+      "policyEndDate": "2025-07-05T15:36:18.338Z",
+      "preExistingDiseases": [],
+      "hospitalNetwork": [],
+      "coverageDetails": {
+        "hospitalization": true,
+        "preHospitalizationDays": 30,
+        "postHospitalizationDays": 60,
+        "maternityCoverage": false,
+        "ambulanceChargesCovered": true,
+        "criticalIllnessCoverage": true,
+        "covidCoverage": true,
+        "annualHealthCheckup": false
+      },
+      "exclusions": [],
+      "nomineeName": "",
+      "nomineeRelation": "",
+      "contactNumber": "",
+      "email": "",
+      "address": ""
+    },
+    {
+      "id": "9550",
+      "poliycId": "",
+      "policyHolderName": "",
+      "age": "",
+      "gender": "",
+      "policyType": "",
+      "sumInsured": "",
+      "premiumAmount": "",
+      "policyStartDate": "",
+      "policyEndDate": "",
+      "nomineeName": "",
+      "nomineeRelation": "",
+      "contactNumber": "",
+      "email": "",
+      "address": ""
+    },
+    {
+      "id": "22f6",
+      "poliycId": "",
+      "policyHolderName": "",
+      "age": "",
+      "gender": "",
+      "policyType": "",
+      "sumInsured": "",
+      "premiumAmount": "",
+      "policyStartDate": "",
+      "policyEndDate": "",
+      "nomineeName": "",
+      "nomineeRelation": "",
+      "contactNumber": "",
+      "email": "",
+      "address": ""
+    },
+    {
+      "id": "46b4",
+      "poliycId": "",
+      "policyHolderName": "",
+      "age": "",
+      "gender": "",
+      "policyType": "",
+      "sumInsured": "",
+      "premiumAmount": "",
+      "policyStartDate": "",
+      "policyEndDate": "",
+      "nomineeName": "",
+      "nomineeRelation": "",
+      "contactNumber": "",
+      "email": "",
+      "address": ""
+    },
+    {
+      "id": "feac",
+      "poliycId": "",
+      "policyHolderName": "",
+      "age": "",
+      "gender": "",
+      "policyType": "",
+      "sumInsured": "",
+      "premiumAmount": "",
+      "policyStartDate": "",
+      "policyEndDate": "",
+      "nomineeName": "",
+      "nomineeRelation": "",
+      "contactNumber": "",
+      "email": "",
+      "address": ""
+    },
+    {
+      "id": "74b4",
+      "poliycId": "",
+      "policyHolderName": "",
+      "age": "",
+      "gender": "Male",
+      "policyType": "",
+      "sumInsured": "",
+      "premiumAmount": "",
+      "policyStartDate": "",
+      "policyEndDate": "",
+      "nomineeName": "",
+      "nomineeRelation": "",
+      "contactNumber": "",
+      "email": "",
+      "address": ""
+    },
+    {
+      "id": "473c",
+      "poliycId": "",
+      "policyHolderName": "",
+      "age": "",
+      "gender": "",
+      "policyType": "",
+      "sumInsured": "",
+      "premiumAmount": "",
+      "policyStartDate": "",
+      "policyEndDate": "",
+      "nomineeName": "",
+      "nomineeRelation": "",
+      "contactNumber": "",
+      "email": 28,
+      "address": ""
+    }
   ],
-
-   "coverageDetails": {
-    "hospitalization": true,
-    "preHospitalizationDays": 30,
-    "postHospitalizationDays": 60,
-    "maternityCoverage": false,
-    "ambulanceChargesCovered": true,
-    "criticalIllnessCoverage": true,
-    "covidCoverage": true,
-    "annualHealthCheckup": true
-  }
+  "policy": [
+    {
+      "id": "5615",
+      "policyId": "dasfs3254",
+      "policyholderName": "rana",
+      "age": "34",
+      "gender": "male",
+      "policyStartDate": "01-01-2024",
+      "policyEndDate": "01-01-2025",
+      "sumInsured": "500000",
+      "premiumAmount": "7500",
+      "coverageLimit": "10000",
+      "nomineeName": "jkdvv",
+      "nomineeRelation": "focup",
+      "email": "fjhdsfhj@jkf.com"
+    }
+  ]
 }
-

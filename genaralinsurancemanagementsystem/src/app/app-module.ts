@@ -14,6 +14,12 @@ import { Userprofile } from './component/auth/userprofile/userprofile';
 import { Showallhealthpolicy } from './component/health/showallhealthpolicy/showallhealthpolicy';
 import { Addhealthpolicy } from './component/health/addhealthpolicy/addhealthpolicy';
 import { Updatehealthpolicy } from './component/health/updatehealthpolicy/updatehealthpolicy';
+import { RouterModule } from '@angular/router';
+import { Healthbody } from './component/health/healthbody/healthbody';
+import { Healthpolicyshow } from './component/health/healthpolicyshow/healthpolicyshow';
+
+import { Policylist } from './component/policylist/policylist';
+import { Policyform } from './component/policyform/policyform';
 
 
 
@@ -28,14 +34,19 @@ import { Updatehealthpolicy } from './component/health/updatehealthpolicy/update
     Userprofile,
     Showallhealthpolicy,
     Addhealthpolicy,
-    Updatehealthpolicy
-    
+    Updatehealthpolicy,
+    Healthbody,
+    Healthpolicyshow,
+    Policyform,
+    Policylist
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule,
+    
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

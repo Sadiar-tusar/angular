@@ -12,23 +12,26 @@ export class HealthService {
 
  constructor(private http: HttpClient) {}
 
-  getAllPolicies(): Observable<HealthInsurancePolicy[]> {
-    return this.http.get<HealthInsurancePolicy[]>(this.baseUrl);
+  getAllPolicy(): Observable<any> {
+    return this.http.get(this.baseUrl);
   }
 
-  getPolicyById(policyId: string): Observable<HealthInsurancePolicy> {
-    return this.http.get<HealthInsurancePolicy>(`${this.baseUrl}/${policyId}`);
+  savePolicy(policy: HealthInsurancePolicy): Observable<any> {
+
+    return this.http.post(this.baseUrl, policy);
+
   }
 
-  createPolicy(policy: HealthInsurancePolicy): Observable<HealthInsurancePolicy> {
-    return this.http.post<HealthInsurancePolicy>(this.baseUrl, policy);
+  deletePolicy(policyId: string): Observable<any> {
+    return this.http.delete(this.baseUrl + "/" + policyId);
   }
 
-  updatePolicy(policyId: string, policy: HealthInsurancePolicy): Observable<HealthInsurancePolicy> {
-    return this.http.put<HealthInsurancePolicy>(`${this.baseUrl}/${policyId}`, policy);
+  getPolicyById(policyId: string): Observable<any> {
+    return this.http.get(this.baseUrl + "/" + policyId);
   }
 
-  deletePolicy(policyId: string): Observable<void> {
-    return this.http.delete<void>(`${this.baseUrl}/${policyId}`);
+  updatePolicy(policyId: string, policy: HealthInsurancePolicy): Observable<any>{
+
+    return this.http.put(this.baseUrl +"/"+ policyId, policy);
   }
 }

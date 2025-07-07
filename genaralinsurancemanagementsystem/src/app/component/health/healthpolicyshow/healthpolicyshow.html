@@ -1,0 +1,44 @@
+<div class="container">
+<div class="table table-stripd">
+  <h2>Health Insurance Policy List</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Policy ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Type</th>
+        <th>Sum Insured</th>
+        <th>Premium</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Nominee</th>
+        <th>Relation</th>
+        <th>Contact</th>
+        <th>Email</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let policy of policies |async">
+        <td>{{ policy.policyId }}</td>
+        <td>{{ policy.policyHolderName }}</td>
+        <td>{{ policy.age }}</td>
+        <td>{{ policy.gender }}</td>
+        <td>{{ policy.policyType }}</td>
+        <td>{{ policy.sumInsured }}</td>
+        <td>{{ policy.premiumAmount }}</td>
+        <td>{{ policy.policyStartDate | date }}</td>
+        <td>{{ policy.policyEndDate | date }}</td>
+        <td>{{ policy.nomineeName }}</td>
+        <td>{{ policy.nomineeRelation }}</td>
+        <td>{{ policy.contactNumber }}</td>
+        <td>{{ policy.email }}</td>
+        <td>{{ policy.address }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
