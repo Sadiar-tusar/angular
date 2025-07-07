@@ -1,11 +1,11 @@
 export class Policy{
 
-     policyId !: string;
+     id !: string;
   policyholderName !: string;
   age !: number;
   gender !: string;
-  policyStartDate !: string;
-  policyEndDate !: string;
+  policyStartDate !: Date;
+  policyEndDate !: Date;
   sumInsured !: number;
   premiumAmount !: number;
   coverageLimit !: number;

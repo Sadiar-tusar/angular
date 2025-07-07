@@ -26,7 +26,7 @@ export class Policyform implements OnInit{
 
   ngOnInit(): void {
     this.policyForm = this.fb.group({
-      policyId: ['', Validators.required],
+      id: ['', Validators.required],
       policyholderName: ['', Validators.required],
       age: [null, [Validators.required, Validators.min(0)]],
       gender: ['', Validators.required],

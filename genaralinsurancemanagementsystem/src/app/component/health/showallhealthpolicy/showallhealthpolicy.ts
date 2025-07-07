@@ -17,19 +17,19 @@ export class Showallhealthpolicy implements OnInit {
 
   policies: any;
 
-  formGroup!:FormGroup
+  formGroup!: FormGroup
 
 
   constructor(
     private healthService: HealthService,
-     private router: Router,
-     private cdr: ChangeDetectorRef,
-     private formBuilder: FormBuilder
+    private router: Router,
+    private cdr: ChangeDetectorRef,
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit(): void {
-     this.formGroup = this.formBuilder.group({
-      poliycId: [''],
+    this.formGroup = this.formBuilder.group({
+
       policyHolderName: [''],
       age: [''],
       gender: [''],
@@ -43,16 +43,17 @@ export class Showallhealthpolicy implements OnInit {
       contactNumber: [''],
       email: [''],
       address: [''],
-    }); 
+      
+    });
   }
 
-  loadAllData():void {
- this.policies= this.healthService.getAllPolicy();
+  loadAllData(): void {
+    this.policies = this.healthService.getAllPolicy();
   }
 
-   
-    addPolicy():void{
-       const healthPolicy: HealthInsurancePolicy = { ...this.formGroup.value };
+
+  addPolicy(): void {
+    const healthPolicy: HealthInsurancePolicy = { ...this.formGroup.value };
     this.healthService.savePolicy(healthPolicy).subscribe({
       next: (res) => {
         console.log(res);
@@ -60,12 +61,12 @@ export class Showallhealthpolicy implements OnInit {
         this.router.navigate(['/showhealthpolicy']);
       },
       error: (error) => {
-console.log(error);
+        console.log(error);
       }
     });
-    }
+  }
 
-  
+
 
   deletePolicy(policyId: string): void {
     this.healthService.deletePolicy(policyId).subscribe({
@@ -81,17 +82,17 @@ console.log(error);
 
   }
 
-  getPolicyById(policyId: string): void{
-this.healthService.getPolicyById(policyId).subscribe({
+  getPolicyById(policyId: string): void {
+    this.healthService.getPolicyById(policyId).subscribe({
 
-  next: () => {
+      next: () => {
         this.loadAllData();
-        this.router.navigate(['/updatepolicy',policyId])
+        this.router.navigate(['/updatepolicy', policyId])
       },
       error: (error) => {
 
       }
-})
+    })
   }
 
   onSubmit() {

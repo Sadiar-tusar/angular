@@ -12,13 +12,13 @@
   </thead>
   <tbody>
     <tr *ngFor="let policy of policies">
-      <td>{{ policy.policyId }}</td>
+      <td>{{ policy.id }}</td>
       <td>{{ policy.policyholderName }}</td>
       <td>{{ policy.policyStartDate }}</td>
       <td>{{ policy.policyEndDate }}</td>
       <td>
-        <button [routerLink]="['/edit', policy.policyId]">Edit</button>
-        <button (click)="deletePolicy(policy.policyId)">Delete</button>
+        <button [routerLink]="['/edit', policy.id]">Edit</button>
+        <button (click)="deletePolicy(policy.id)">Delete</button>
       </td>
     </tr>
   </tbody>

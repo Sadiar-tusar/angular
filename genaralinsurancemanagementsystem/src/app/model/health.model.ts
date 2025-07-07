@@ -1,5 +1,6 @@
 export class HealthInsurancePolicy {
-  policyId !: string;
+
+  id !: string;
   policyHolderName !: string;
   age !: number;
   gender !: string;
@@ -13,6 +14,8 @@ export class HealthInsurancePolicy {
   contactNumber !: string;
   email !: string;
   address !: string;
+
+
 }
 
 

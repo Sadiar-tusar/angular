@@ -17,6 +17,7 @@ export class Policylist implements OnInit{
 
   ngOnInit(): void {
     this.loadPolicies();
+    
   }
 
   loadPolicies(): void {

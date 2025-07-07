@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HealthService } from '../../../service/health.service';
 import { Router } from '@angular/router';
+import { HealthInsurancePolicy } from '../../../model/health.model';
 
 @Component({
   selector: 'app-healthpolicyshow',
@@ -8,31 +9,48 @@ import { Router } from '@angular/router';
   templateUrl: './healthpolicyshow.html',
   styleUrl: './healthpolicyshow.css'
 })
-export class Healthpolicyshow implements OnInit{
+export class Healthpolicyshow implements OnInit {
 
-  policies: any;
+  policies: HealthInsurancePolicy[] = [];
 
-   constructor(
+  constructor(
     private healthService: HealthService,
-     private router: Router,
-     private cdr: ChangeDetectorRef
+    private router: Router,
+    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
     this.loadAllData();
   }
 
-  loadAllData():void {
- this.policies= this.healthService.getAllPolicy();
+  loadAllData(): void {
+
+
+    this.healthService.getAllPolicy().subscribe({
+
+      next: (res) => {
+
+        this.policies = res;
+        console.log(res);
+
+      },
+      error: (err) => {
+        console.log(err);
+
+      }
+
+    });
+
+
   }
 
-   
-    
 
-  
 
-  deletePolicy(policyId: string): void {
-    this.healthService.deletePolicy(policyId).subscribe({
+
+
+
+  deletePolicy(id: string): void {
+    this.healthService.deletePolicy(id).subscribe({
 
       next: () => {
         this.loadAllData();
@@ -45,16 +63,16 @@ export class Healthpolicyshow implements OnInit{
 
   }
 
-  getPolicyById(policyId: string): void{
-this.healthService.getPolicyById(policyId).subscribe({
+  getPolicyById(id: string): void {
+    this.healthService.getPolicyById(id).subscribe({
 
-  next: () => {
+      next: () => {
         this.loadAllData();
-        this.router.navigate(['/showhealthpolicy',policyId])
+        this.router.navigate(['/showhealthpolicy', id])
       },
       error: (error) => {
 
       }
-})
+    })
   }
 }
