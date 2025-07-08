@@ -20,6 +20,11 @@ import { Healthpolicyshow } from './component/health/healthpolicyshow/healthpoli
 import { Policy } from './component/policy/policy';
 import { Creatpolicy } from './component/creatpolicy/creatpolicy';
 import { Updatepolicy } from './component/updatepolicy/updatepolicy';
+import { Bill } from './component/bill/bill';
+import { Creatbill } from './component/creatbill/creatbill';
+import { Updatebill } from './component/updatebill/updatebill';
+import { Reciept } from './component/reciept/reciept';
+import { Creatreciept } from './component/creatreciept/creatreciept';
 
 
 
@@ -42,6 +47,11 @@ import { Updatepolicy } from './component/updatepolicy/updatepolicy';
     Policy,
     Creatpolicy,
     Updatepolicy,
+    Bill,
+    Creatbill,
+    Updatebill,
+    Reciept,
+    Creatreciept,
    
     
   ],

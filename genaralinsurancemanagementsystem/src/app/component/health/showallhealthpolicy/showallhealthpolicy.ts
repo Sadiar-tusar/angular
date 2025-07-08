@@ -49,6 +49,7 @@ export class Showallhealthpolicy implements OnInit {
 
   loadAllData(): void {
     this.policies = this.healthService.getAllPolicy();
+    this.cdr.markForCheck();
   }
 
 

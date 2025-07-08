@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -15,11 +15,12 @@ export class Policy implements OnInit{
   policies: any;
 
 constructor(
-   private policyService: PolicymodelService,
-    private http: HttpClient,
-    private router: Router
+   private policyService: PolicymodelService,   
+    private router: Router,
+    private cdr: ChangeDetectorRef
 ){}
   ngOnInit(): void {
+    this.cdr.markForCheck();
     this.policies = this.policyService.viewAllPolicy();
   }
 
@@ -43,8 +44,5 @@ constructor(
     this.router.navigate(['updatepolicy', id]);
   }
 
-  navigateToAddPolicy() {
-    this.router.navigateByUrl('/createpolicy');
-  }
 
 }

@@ -12,6 +12,9 @@ import { Healthpolicyshow } from './component/health/healthpolicyshow/healthpoli
 import { Policy } from './component/policy/policy';
 import { Creatpolicy } from './component/creatpolicy/creatpolicy';
 import { Updatepolicy } from './component/updatepolicy/updatepolicy';
+import { Bill } from './component/bill/bill';
+import { Creatbill } from './component/creatbill/creatbill';
+import { Updatebill } from './component/updatebill/updatebill';
 
 
 const routes: Routes = [
@@ -29,6 +32,9 @@ const routes: Routes = [
   { path: "viewpolicy", component: Policy },
   { path: "createpolicy", component: Creatpolicy },
   { path: "updatepolicy/:id", component: Updatepolicy },
+   { path: "viewbill", component: Bill },
+  { path: "createbill", component: Creatbill },
+  { path: "updatebill/:id", component: Updatebill},
   
 
 ];

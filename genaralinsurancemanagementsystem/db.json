@@ -68,8 +68,6 @@
       "role": "user"
     }
   ],
-  
-  
   "healthinsurancepolicy": [
     {
       "id": "67da",
@@ -102,6 +100,22 @@
       "contactNumber": "",
       "email": "eiasin@gmail.com",
       "address": ""
+    },
+    {
+      "id": "5859",
+      "policyHolderName": "atiq",
+      "age": 32,
+      "gender": "male",
+      "policyType": "",
+      "sumInsured": 34535,
+      "premiumAmount": "",
+      "policyStartDate": "2025-07-31",
+      "policyEndDate": "2025-08-29",
+      "nomineeName": "dgfghdf",
+      "nomineeRelation": "",
+      "contactNumber": "",
+      "email": "dsfd@gs.com",
+      "address": ""
     }
   ],
   "policy": [
@@ -119,6 +133,34 @@
       "email": "fjhdsfhj@jkf.com",
       "policyId": "dasfs3254",
       "id": "5615"
+    }
+  ],
+  "bills": [
+    {
+      "id": "3ad1",
+      "fire": 2,
+      "rsd": 2,
+      "netPremium": 6000000,
+      "tax": ".15",
+      "grossPremium": 6900000,
+      "policies": {
+        "id": "e243",
+        "billNo": 1001,
+        "date": "2024-09-01",
+        "bankName": "Islami Bank Bangladesh PLC, Dhanmondi Branch, Dhaka",
+        "policyholder": "Kacci Bhai Restaurants , Prop: Md. Raju Chowdhury  ",
+        "address": "lalbagh Roard , Lalabagh Dhaka 1203",
+        "sumInsured": 2000000,
+        "stockInsured": "food",
+        "interestInsured": "Hotel & Restaurants",
+        "coverage": "Fire &/or Lightning only",
+        "location": "185/1 lalbagh Roard , Lalabagh Dhaka 1203",
+        "construction": "2nd Class",
+        "owner": "The Insured",
+        "usedAs": "Shop Only",
+        "periodFrom": "2024-09-01",
+        "periodTo": "2025-09-01"
+      }
     }
   ]
 }
