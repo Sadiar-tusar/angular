@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Policyform } from './policyform';
+import { Creatpolicy } from './creatpolicy';
 
-describe('Policyform', () => {
-  let component: Policyform;
-  let fixture: ComponentFixture<Policyform>;
+describe('Creatpolicy', () => {
+  let component: Creatpolicy;
+  let fixture: ComponentFixture<Creatpolicy>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [Policyform]
+      declarations: [Creatpolicy]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Policyform);
+    fixture = TestBed.createComponent(Creatpolicy);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

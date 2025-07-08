@@ -9,8 +9,10 @@ import { Showallhealthpolicy } from './component/health/showallhealthpolicy/show
 import { Addhealthpolicy } from './component/health/addhealthpolicy/addhealthpolicy';
 import { Healthbody } from './component/health/healthbody/healthbody';
 import { Healthpolicyshow } from './component/health/healthpolicyshow/healthpolicyshow';
-import { Policylist } from './component/policylist/policylist';
-import { Policyform } from './component/policyform/policyform';
+import { Policy } from './component/policy/policy';
+import { Creatpolicy } from './component/creatpolicy/creatpolicy';
+import { Updatepolicy } from './component/updatepolicy/updatepolicy';
+
 
 const routes: Routes = [
   {path:'',component: Home},
@@ -24,9 +26,10 @@ const routes: Routes = [
   {path:'health/edit/:id', component: Addhealthpolicy},
   {path:'healthbody', component: Healthbody},
   {path:'showhealthpolicy', component:Healthpolicyshow},
-  { path: 'show', component: Policylist },
-  { path: 'add', component: Policyform },
-  { path: 'edit/:id', component: Policyform }
+  { path: "viewpolicy", component: Policy },
+  { path: "createpolicy", component: Creatpolicy },
+  { path: "updatepolicy/:id", component: Updatepolicy },
+  
 
 ];
 

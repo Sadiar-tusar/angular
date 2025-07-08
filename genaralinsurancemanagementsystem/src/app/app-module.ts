@@ -6,7 +6,7 @@ import { App } from './app';
 import { Home } from './component/home/home';
 import { Dashboard } from './component/dashboard/dashboard';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { provideHttpClient, withFetch } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
 import { Registration } from './component/auth/registration/registration';
 import { Login } from './component/auth/login/login';
 import { Logout } from './component/auth/logout/logout';
@@ -17,9 +17,11 @@ import { Updatehealthpolicy } from './component/health/updatehealthpolicy/update
 import { RouterModule } from '@angular/router';
 import { Healthbody } from './component/health/healthbody/healthbody';
 import { Healthpolicyshow } from './component/health/healthpolicyshow/healthpolicyshow';
+import { Policy } from './component/policy/policy';
+import { Creatpolicy } from './component/creatpolicy/creatpolicy';
+import { Updatepolicy } from './component/updatepolicy/updatepolicy';
 
-import { Policylist } from './component/policylist/policylist';
-import { Policyform } from './component/policyform/policyform';
+
 
 
 
@@ -37,8 +39,11 @@ import { Policyform } from './component/policyform/policyform';
     Updatehealthpolicy,
     Healthbody,
     Healthpolicyshow,
-    Policyform,
-    Policylist
+    Policy,
+    Creatpolicy,
+    Updatepolicy,
+   
+    
   ],
   imports: [
     BrowserModule,
@@ -46,6 +51,7 @@ import { Policyform } from './component/policyform/policyform';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
+  
     
   ],
   providers: [
