@@ -54,6 +54,8 @@ export class Creatbill implements OnInit{
       })
     });
 
+    this.loadPolicies();
+
     this.billForm.get('periodFrom')?.valueChanges.subscribe(value => {
       if (value) {
         const periodFromDate = new Date(value);

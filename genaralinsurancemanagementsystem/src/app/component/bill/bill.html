@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,12 +8,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Font Awesome CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <!-- Custom CSS -->
+  Custom CSS -->
 
-</head>
-<body>
+<!-- </head> -->
+<!-- <body> -->
 <div class="container">
-  <div class="row mt-3">
+  <!-- <div class="row mt-3">
     <div class="col">
       <button type="button" class="btn btn-primary" (click)="navigateToAddReciept()">
         <i class="fas fa-plus"></i>
@@ -26,7 +26,7 @@
         Create Bill
       </button>
     </div>
-  </div>
+  </div> -->
 
   <table class="table table-striped mt-3">
     <thead>
@@ -55,7 +55,7 @@
         <td>{{ getTaxAmount(bil) | currency:'TK':'symbol' }}</td>
         <td>{{ getGrossPremium(bil) | currency:'TK':'symbol' }}</td>
         <td class="text-center">
-          <button class="btn btn-outline-secondary" aria-label="Edit" (click)="editBill(bil)">
+          <button class="btn btn-outline-secondary" aria-label="Edit" (click)="getBillByBillId(bil.id)">
             <i class="fas fa-edit"></i>
           </button>
           <button class="btn btn-outline-danger" aria-label="Delete" (click)="deleteBill(bil.id)">
@@ -71,6 +71,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </div>
-</body>
-</html>
+<!-- </body>
+</html> -->
  

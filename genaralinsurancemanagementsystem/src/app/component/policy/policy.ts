@@ -20,19 +20,24 @@ constructor(
     private cdr: ChangeDetectorRef
 ){}
   ngOnInit(): void {
+   
+   this.loadPolicy();
+  }
+
+  loadPolicy(): void{
+    this.policies=this.policyService.getAllPolicies();
     this.cdr.markForCheck();
-    this.policies = this.policyService.viewAllPolicy();
   }
 
    deletePolicy(id: string) {
     this.policyService.deletePolicy(id)
       .subscribe({
-        next: res => {
+        next: (res) => {
           console.log(res);
-          this.policies = this.policyService.viewAllPolicy();
-          this.router.navigate(['viewpolicy'])
+           this.loadPolicy();
+        this.cdr.reattach();
         },
-        error: error => {
+        error: (error) => {
           console.log(error);
 
         }
@@ -40,9 +45,22 @@ constructor(
       });
   }
 
-  editPolicy(id: string) {
-    this.router.navigate(['updatepolicy', id]);
+   getPolicyById(id: string): void{
+this.policyService.getByPolicyId(id).subscribe({
+
+  next: () => {
+        this.loadPolicy();
+        this.router.navigate(['/updatepolicy',id])
+      },
+      error: (error) => {
+
+      }
+})
   }
+
+  // editPolicy(id: string) {
+  //   this.router.navigate(['/updatepolicy', id]);
+  // }
 
 
 }

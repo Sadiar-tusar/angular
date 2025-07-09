@@ -14,7 +14,7 @@ export class Creatpolicy implements OnInit{
   
 
 formValue!: FormGroup;
-  policy: PolicyModel = new PolicyModel();
+  // policy: PolicyModel = new PolicyModel();
   lastBillNo: number = 1000;
 
   constructor(
@@ -24,72 +24,74 @@ formValue!: FormGroup;
   ){}
 
   ngOnInit(): void {
-   const currentDate = new Date().toISOString().substring(0, 10); 
+  //  const currentDate = new Date().toISOString().substring(0, 10); 
 
    this.formValue = this.formBuilder.group({
-      billNo: [{ value: ''}],
-      date: [currentDate], 
+      billNo: [''],
+      date: [''], 
       bankName: [''],
       policyholder: [''],
       address: [''],
       sumInsured: [''],
       stockInsured: [''],
       interestInsured: [''],
-      coverage: ['Fire &/or Lightning only'],
+      coverage: [''],
       location: [''],
       construction: [''],
-      owner: [ 'The Insured' ],
+      owner: [ '' ],
       usedAs: [''],
-      periodFrom: ['', Validators.required],
-      periodTo: [{ value: '' }] 
-    });
+      periodFrom: [''],
+      periodTo: [''] 
 
-    this.formValue.get('periodFrom')?.valueChanges.subscribe(value => {
-      if (value) {
-        const periodFromDate = new Date(value);
-        const periodToDate = new Date(periodFromDate);
-        periodToDate.setFullYear(periodFromDate.getFullYear() + 1);
-        this.formValue.patchValue({
-          periodTo: periodToDate.toISOString().substring(0, 10) 
-        }, { emitEvent: false });
-      }
-    });
+       });
 
-    this.fetchLastBillNo(); // Fetch last bill number once
+    // this.formValue.get('periodFrom')?.valueChanges.subscribe(value => {
+    //   if (value) {
+    //     const periodFromDate = new Date(value);
+    //     const periodToDate = new Date(periodFromDate);
+    //     periodToDate.setFullYear(periodFromDate.getFullYear() + 1);
+    //     this.formValue.patchValue({
+    //       periodTo: periodToDate.toISOString().substring(0, 10) 
+    //     }, { emitEvent: false });
+    //   }
+    // });
+
+    // this.fetchLastBillNo(); // Fetch last bill number once
   }
 
-  fetchLastBillNo(): void {
-    this.policyService.getLastBillNo().subscribe({
-      next: (lastBillNo: number) => {
-        this.lastBillNo = lastBillNo;
-        this.setNextBillNo();
-      },
-      error: (err: any) => {
-        console.error('Error fetching last bill number', err);
-        this.setNextBillNo(); // Handle error by setting the next bill number
-      }
-    });
-  }
+  // fetchLastBillNo(): void {
+  //   this.policyService.getLastBillNo().subscribe({
+  //     next: (lastBillNo: number) => {
+  //       this.lastBillNo = lastBillNo;
+  //       this.setNextBillNo();
+  //     },
+  //     error: (err: any) => {
+  //       console.error('Error fetching last bill number', err);
+  //       this.setNextBillNo(); // Handle error by setting the next bill number
+  //     }
+  //   });
+  // }
 
-  setNextBillNo(): void {
-    this.lastBillNo++;
-    this.formValue.patchValue({
-      billNo: this.lastBillNo
-    });
-  }
+  // setNextBillNo(): void {
+  //   this.lastBillNo++;
+  //   this.formValue.patchValue({
+  //     billNo: this.lastBillNo
+  //   });
+  // }
 
-  createPolicy() {
-    this.policy = this.formValue.getRawValue();
+  createPolicy():void {
+    const policy : PolicyModel = {...this.formValue.value}
+    // this.policy = this.formValue.getRawValue();
     
-    this.policyService.createPolicy(this.policy)
-      .subscribe({
-        next: res => {
+    
+    this.policyService.createPolicy(policy).subscribe({
+        next: (res) => {
           console.log(res);
           this.formValue.reset();
-          this.fetchLastBillNo(); // Fetch the last bill number again if needed
+          // this.fetchLastBillNo(); // Fetch the last bill number again if needed
           this.router.navigate(['/viewpolicy']);
         },
-        error: err => {
+        error: (err) => {
           console.log(err);
         }
       });

@@ -4,7 +4,7 @@
       "billNo": 1001,
       "date": "2024-09-01",
       "bankName": "Islami Bank Bangladesh PLC, Dhanmondi Branch, Dhaka",
-      "policyholder": "Kacci Bhai Restaurants , Prop: Md. Raju Chowdhury  ",
+      "policyholder": "Rajdhani Resturent , Prop: Md. Raju Chowdhury  ",
       "address": "lalbagh Roard , Lalabagh Dhaka 1203",
       "sumInsured": 2000000,
       "stockInsured": "food",
@@ -17,6 +17,42 @@
       "periodFrom": "2024-09-01",
       "periodTo": "2025-09-01",
       "id": "e243"
+    },
+    {
+      "id": "3d1e",
+      "billNo": 12,
+      "date": "2025-07-09",
+      "bankName": "Islami Bank",
+      "policyholder": "Akij Food & Bevarage",
+      "address": "Mohakhali",
+      "sumInsured": "50000",
+      "stockInsured": "Food",
+      "interestInsured": "Hotel & Restaurants",
+      "coverage": "Fire",
+      "location": "12/sfghdf,Mohakhali",
+      "construction": "2nd class",
+      "owner": "The Insured",
+      "usedAs": "Shop Only",
+      "periodFrom": "2025-07-31",
+      "periodTo": "2025-08-30"
+    },
+    {
+      "billNo": 24,
+      "date": "2025-07-09",
+      "bankName": "Dhaka Bank",
+      "policyholder": "Arif Shop",
+      "address": "Kollanpur",
+      "sumInsured": 180,
+      "stockInsured": "dfgsdgv",
+      "interestInsured": "dfvxdv",
+      "coverage": "dfhfgh",
+      "location": "fsdsgfbg",
+      "construction": "3rd Class",
+      "owner": "dvgxbxcvbvfb",
+      "usedAs": "Shop-Cum-Godwon Only",
+      "periodFrom": "2025-07-31",
+      "periodTo": "2025-08-30",
+      "id": "865b"
     }
   ],
   "user": [
@@ -116,25 +152,25 @@
       "contactNumber": "",
       "email": "dsfd@gs.com",
       "address": ""
-    }
-  ],
-  "policy": [
+    },
     {
-      "policyholderName": "Rohim",
-      "age": "34",
+      "id": "1662",
+      "policyHolderName": "ghdfghdfh",
+      "age": 43,
       "gender": "male",
-      "policyStartDate": "01-01-2024",
-      "policyEndDate": "01-01-2025",
-      "sumInsured": "500000",
-      "premiumAmount": "7500",
-      "coverageLimit": "10000",
-      "nomineeName": "jkdvv",
-      "nomineeRelation": "focup",
-      "email": "fjhdsfhj@jkf.com",
-      "policyId": "dasfs3254",
-      "id": "5615"
+      "policyType": "",
+      "sumInsured": 534535,
+      "premiumAmount": "",
+      "policyStartDate": "2025-07-31",
+      "policyEndDate": "2025-08-29",
+      "nomineeName": "fxbcfb",
+      "nomineeRelation": "",
+      "contactNumber": "",
+      "email": "rana@gmail.com",
+      "address": ""
     }
   ],
+  "policy": [],
   "bills": [
     {
       "id": "3ad1",
@@ -160,6 +196,32 @@
         "usedAs": "Shop Only",
         "periodFrom": "2024-09-01",
         "periodTo": "2025-09-01"
+      }
+    },
+    {
+      "id": "854b",
+      "fire": 1,
+      "rsd": 1,
+      "netPremium": 50000,
+      "tax": ".15",
+      "grossPremium": 57500,
+      "policies": {
+        "id": "3d1e",
+        "billNo": 12,
+        "date": "2025-07-09",
+        "bankName": "Islami Bank",
+        "policyholder": "Akij Food & Bevarage",
+        "address": "Mohakhali",
+        "sumInsured": "50000",
+        "stockInsured": "Food",
+        "interestInsured": "Hotel & Restaurants",
+        "coverage": "Fire",
+        "location": "12/sfghdf,Mohakhali",
+        "construction": "2nd class",
+        "owner": "The Insured",
+        "usedAs": "Shop Only",
+        "periodFrom": "2025-07-31",
+        "periodTo": "2025-08-30"
       }
     }
   ]

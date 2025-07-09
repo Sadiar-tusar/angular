@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { BillModel } from '../../model/bill.model';
 import { PolicymodelService } from '../../service/policymodel.service';
 import { BilmodelService } from '../../service/bilmodel.service';
 import { Router } from '@angular/router';
+import { error } from 'node:console';
+import { PolicyModel } from '../../model/policy';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-bill',
@@ -12,25 +15,56 @@ import { Router } from '@angular/router';
 })
 export class Bill implements OnInit{
 
-  policyes: any;
+  policyes: PolicyModel[]=[];
   bills: BillModel[] = [];
 
 constructor(
     private policiesService: PolicymodelService,
     private billService: BilmodelService,
-    private router: Router
+    private router: Router,
+    private cdr :ChangeDetectorRef
 
   ) { }
   ngOnInit(): void {
-     this.policyes = this.policiesService.viewAllPolicyForBill();
+    this.loadAllData();
+    //  this.policyes = this.policiesService.viewAllPolicyForBill();
 
-    // Subscribe to the observable to fetch bills
-    this.billService.viewAllBill().subscribe({
-      next: (data: BillModel[]) => {
-        this.bills = data;
+    // // Subscribe to the observable to fetch bills
+    // this.billService.viewAllBill().subscribe({
+    //   next: (data: BillModel[]) => {
+    //     this.bills = data;
+    //   },
+    //   error: (error) => {
+    //     console.error('Error fetching bills:', error);
+    //   }
+    // });
+    // this.lo();
+  }
+
+  //  loadAllBill(): void{
+  //   this.billService.viewAllBill().subscribe({
+  //     next: (res) => {
+  //       this.bills = res;
+  //     },
+  //     error: (error) => {
+  //       console.log(error);
+  //     }
+  //   });
+    
+  // }
+
+  loadAllData():void{
+    forkJoin({
+    policyes: this.policiesService.viewAllPolicyForBill(),
+    bills: this.billService.viewAllBill()
+    }).subscribe({
+      next:({policyes, bills})=>{
+        this.bills=bills;
+        this.policyes=policyes;
+        this.cdr.markForCheck();
       },
-      error: (error) => {
-        console.error('Error fetching bills:', error);
+      error:(err)=>{
+        console.log(err);
       }
     });
   }
@@ -39,14 +73,30 @@ constructor(
     this.billService.deleteBill(id)
       .subscribe({
         next: () => {
+          this.loadAllData();
           this.refreshBills();
-          this.router.navigate(['/viewbill']);
+          this.cdr.reattach();
+          // this.router.navigate(['/viewbill']);
         },
         error: (error) => {
           console.log(error);
         }
       });
   }
+
+  getBillByBillId(id: string): void{
+this.billService.getByBillId(id).subscribe({
+
+  next: () => {
+        this.loadAllData();
+        this.router.navigate(['/updatebill',id])
+      },
+      error: (error) => {
+
+      }
+});
+  }
+
   private refreshBills(): void {
     this.billService.viewAllBill().subscribe({
       next: (data: BillModel[]) => {

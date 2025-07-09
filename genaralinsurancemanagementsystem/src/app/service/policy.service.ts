@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { Policy } from '../model/policy.model';
+import { PolicyModel } from '../model/policy';
 
 
 @Injectable({
@@ -15,28 +16,84 @@ export class PolicyService {
     private http: HttpClient
   ) { }
 
-  // GET all policies
-  getPolicies(): Observable<any> {
-    return this.http.get(this.baseUrl);
+  // View all policies
+  viewAllPolicy(): Observable<any> {
+    return this.http.get(this.baseUrl)
+      .pipe(
+        catchError(this.handleError) // Handle error globally
+      );
   }
 
-  // GET single policy by ID
-  getPolicyById(id: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/${id}`);
+  // View all policies with typing
+  viewAllPolicyForBill(): Observable<PolicyModel[]> {
+    return this.http.get<PolicyModel[]>(this.baseUrl)
+      .pipe(
+        catchError(this.handleError)
+      );
   }
 
-  // POST: Add new policy
-  addPolicy(policy: Policy): Observable<any> {
-    return this.http.post(this.baseUrl, policy);
+  // Create a new policy
+  createPolicy(policy: PolicyModel): Observable<any> {
+    return this.http.post(this.baseUrl, policy)
+      .pipe(
+        catchError(this.handleError)
+      );
   }
 
-  // PUT: Update policy
-  updatePolicy(id: string, policy: Policy): Observable<any> {
-    return this.http.put(`${this.baseUrl}/${id}`, policy);
+  // Delete a policy by ID
+  deletePolicy(id: string): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${id}`)
+      .pipe(
+        catchError(this.handleError)
+      );
   }
 
-  // DELETE: Delete policy
-  deletePolicy(id: string): Observable<void> {
-    return this.http.delete<void>(`${this.baseUrl}/${id}`);
+  // Update a policy by ID
+  updatePolicy(id: string, policy: PolicyModel): Observable<any> {
+    return this.http.put(`${this.baseUrl}/${id}`, policy)
+      .pipe(
+        catchError(this.handleError)
+      );
   }
+
+  // Get a policy by ID
+  getByPolicyId(id: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${id}`)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
+  // Search policies by criteria
+  // searchPolicies(criteria: string, value: string): Observable<PolicyModel[]> {
+  //   const params = new HttpParams().set(criteria, value);
+  //   return this.http.get<PolicyModel[]>(this.baseUrl, { params })
+  //     .pipe(
+  //       catchError(this.handleError)
+  //     );
+  // }
+
+  // Get all policies
+  getAllPolicies(): Observable<PolicyModel[]> {
+    return this.http.get<PolicyModel[]>(this.baseUrl);
+  }
+
+  // Error handling
+  private handleError(error: any) {
+    console.error('An error occurred:', error);
+    return throwError(() => new Error('Something went wrong; please try again later.'));
+  }
+
+  getLastBillNo(): Observable<number> {
+    return this.http.get<number>(`${this.baseUrl}/last-bill-no`);
+  }
+
+    // Search policies by policyholder
+    policyholder(query: string): Observable<PolicyModel[]> {
+      const searchUrl = `${this.baseUrl}?policyholder_like=${query}`;
+      return this.http.get<PolicyModel[]>(searchUrl)
+        .pipe(
+          catchError(this.handleError)
+        );
+    }
 }

@@ -28,15 +28,18 @@ export class BilmodelService {
   }
 
   deleteBill(id: string): Observable<any> {
-    return this.http.delete(this.baseUrl + id);
+    return this.http.delete(this.baseUrl+"/"+ id);
   }
 
-  updateBill(bill: BillModel): Observable<BillModel> {
-    return this.http.put<BillModel>(this.baseUrl + bill.id, bill);
+  // updateBill(bill: BillModel): Observable<BillModel> {
+  //   return this.http.put<BillModel>(this.baseUrl + bill.id, bill);
+  // }
+  updateBill(id: string, bill:BillModel): Observable<any> {
+    return this.http.put(this.baseUrl +"/"+id, bill);
   }
 
-  getByBillId(billId: string): Observable<BillModel> {
-    return this.http.get<BillModel>(this.baseUrl + billId);
+  getByBillId(id: string): Observable<BillModel> {
+    return this.http.get<BillModel>(this.baseUrl+"/"+ id);
   }
 
   

@@ -2,7 +2,7 @@ export class PolicyModel {
 
   id!: string;
   billNo!: number;
-  date!: string;
+  date!: Date;
   bankName!: string;
   policyholder!: string;
   address!: string;
@@ -14,7 +14,7 @@ export class PolicyModel {
   construction!: string;
   owner!: string;
   usedAs!: string;
-  periodFrom!: string;
-  periodTo!: string;
+  periodFrom!: Date;
+  periodTo!: Date;
  
 }

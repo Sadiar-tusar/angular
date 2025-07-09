@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { BillModel } from '../../model/bill.model';
 import { PolicyModel } from '../../model/policy';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -15,16 +15,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class Updatebill implements OnInit{
 
 bill: BillModel = new BillModel();
+bills: BillModel[]=[];
   policies: PolicyModel[] = [];
   billId: string = "";
   billForm!: FormGroup;
+   id: string = "";
+  
 
   constructor(
     private policiesService: PolicymodelService,
     private billService: BilmodelService,
     private formBuilder: FormBuilder,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private cdr: ChangeDetectorRef
   ) { }
   ngOnInit(): void {
      this.billId = this.route.snapshot.params['id'];
@@ -51,6 +55,8 @@ bill: BillModel = new BillModel();
 
     this.loadBill();
     this.loadBillDetails();
+    this.loadBillBillId();
+    this.loadPolicyById();
 
     // Recalculate premiums when fire, rsd, or tax values change
     this.billForm.get('fire')?.valueChanges.subscribe(() => this.calculatePremiums());
@@ -59,10 +65,10 @@ bill: BillModel = new BillModel();
   }
 
   loadBill(): void {
-    this.policiesService.viewAllPolicyForBill()
+    this.billService.viewAllBill()
       .subscribe({
-        next: (res: PolicyModel[]) => {
-          this.policies = res;
+        next: (res: BillModel[]) => {
+          this.bills = res;
         },
         error: er => {
           console.log(er);
@@ -106,23 +112,68 @@ bill: BillModel = new BillModel();
     }, { emitEvent: false });
   }
 
-  updateBill(): void {
-    const updateBill: BillModel = {
-      ...this.bill,
-      ...this.billForm.getRawValue() // Get raw value to include disabled fields
-    };
+  // updateBill(): void {
+  //   const updateBill: BillModel = {
+  //     ...this.bill,
+  //     ...this.billForm.getRawValue() // Get raw value to include disabled fields
+  //   };
 
-    this.billService.updateBill(updateBill)
+  //   this.billService.updateBill(updateBill)
+  //     .subscribe({
+  //       next: res => {
+  //         console.log('Bill updated successfully:', res);
+  //         this.billForm.reset();
+  //         this.router.navigate(['viewbill']);
+  //       },
+  //       error: error => {
+  //         console.log('Error updating bill:', error);
+  //       }
+  //     });
+  // }
+
+  loadBillBillId(){
+
+     this.id = this.route.snapshot.params['id'];
+    this.billService.getByBillId(this.id).subscribe({
+
+      next: (res) => {
+        this.bill = res;
+        this.cdr.markForCheck();
+      },
+      error: (error) => {
+
+      }
+    })
+  }
+
+  updateBillPolicy() {
+    // Update policy with the values from the form
+    this.billService.updateBill(this.id, this.bill)
       .subscribe({
-        next: res => {
-          console.log('Bill updated successfully:', res);
-          this.billForm.reset();
-          this.router.navigate(['viewbill']);
+        next: (res) => {
+          console.log(res);
+          this.router.navigate(['/viewbill']); // Navigate back to the policy list after successful update
         },
-        error: error => {
-          console.log('Error updating bill:', error);
+        error: (error) => {
+          console.log(error);
         }
       });
+  }
+
+  loadPolicyById(){
+
+     this.id = this.route.snapshot.params['id'];
+    this.policiesService.getByPolicyId(this.id).subscribe({
+
+      next: (res) => {
+        this.policies = res;
+        this.cdr.markForCheck();
+      },
+      error: (error) => {
+
+      }
+    })
+
   }
 
 
