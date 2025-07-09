@@ -50,7 +50,7 @@ export class Creatbill implements OnInit{
         owner: [undefined],
         usedAs: [undefined],
         periodFrom: ['', Validators.required],
-        periodTo: [{ value: '' }]
+        periodTo: [ '' ]
       })
     });
 
@@ -83,7 +83,7 @@ export class Creatbill implements OnInit{
   }
 
   loadPolicies(): void {
-    this.policyService.viewAllPolicyForBill()
+    this.policyService.viewAllPolicy()
       .subscribe({
         next: res => {
           this.policies = res;

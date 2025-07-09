@@ -12,15 +12,13 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './updatebill.html',
   styleUrl: './updatebill.css'
 })
-export class Updatebill implements OnInit{
-
-bill: BillModel = new BillModel();
-bills: BillModel[]=[];
+export class Updatebill implements OnInit {
+  id: string = "";
+  bill: BillModel = new BillModel();
   policies: PolicyModel[] = [];
   billId: string = "";
   billForm!: FormGroup;
-   id: string = "";
-  
+
 
   constructor(
     private policiesService: PolicymodelService,
@@ -29,9 +27,10 @@ bills: BillModel[]=[];
     private router: Router,
     private route: ActivatedRoute,
     private cdr: ChangeDetectorRef
+
   ) { }
   ngOnInit(): void {
-     this.billId = this.route.snapshot.params['id'];
+    this.billId = this.route.snapshot.params['id'];
     console.log(this.billId);
     this.billForm = this.formBuilder.group({
       fire: [''],
@@ -55,20 +54,18 @@ bills: BillModel[]=[];
 
     this.loadBill();
     this.loadBillDetails();
-    this.loadBillBillId();
-    this.loadPolicyById();
 
-    // Recalculate premiums when fire, rsd, or tax values change
-    this.billForm.get('fire')?.valueChanges.subscribe(() => this.calculatePremiums());
-    this.billForm.get('rsd')?.valueChanges.subscribe(() => this.calculatePremiums());
-    this.billForm.get('tax')?.valueChanges.subscribe(() => this.calculatePremiums());
+    // // Recalculate premiums when fire, rsd, or tax values change
+    // this.billForm.get('fire')?.valueChanges.subscribe(() => this.calculatePremiums());
+    // this.billForm.get('rsd')?.valueChanges.subscribe(() => this.calculatePremiums());
+    // this.billForm.get('tax')?.valueChanges.subscribe(() => this.calculatePremiums());
   }
 
   loadBill(): void {
-    this.billService.viewAllBill()
+    this.policiesService.viewAllPolicyForBill()
       .subscribe({
-        next: (res: BillModel[]) => {
-          this.bills = res;
+        next: (res: PolicyModel[]) => {
+          this.policies = res;
         },
         error: er => {
           console.log(er);
@@ -112,28 +109,28 @@ bills: BillModel[]=[];
     }, { emitEvent: false });
   }
 
-  // updateBill(): void {
-  //   const updateBill: BillModel = {
-  //     ...this.bill,
-  //     ...this.billForm.getRawValue() // Get raw value to include disabled fields
-  //   };
+  updateBill(): void {
+    const updateBill: BillModel = {
 
-  //   this.billService.updateBill(updateBill)
-  //     .subscribe({
-  //       next: res => {
-  //         console.log('Bill updated successfully:', res);
-  //         this.billForm.reset();
-  //         this.router.navigate(['viewbill']);
-  //       },
-  //       error: error => {
-  //         console.log('Error updating bill:', error);
-  //       }
-  //     });
-  // }
+      ...this.billForm.getRawValue() // Get raw value to include disabled fields
+    };
 
-  loadBillBillId(){
+    this.billService.updateBill(this.billId, updateBill)
+      .subscribe({
+        next: res => {
+          console.log('Bill updated successfully:', res);
+          this.billForm.reset();
+          this.router.navigate(['viewbill']);
+        },
+        error: error => {
+          console.log('Error updating bill:', error);
+        }
+      });
+  }
 
-     this.id = this.route.snapshot.params['id'];
+  loadBillBillId() {
+
+    this.id = this.route.snapshot.params['id'];
     this.billService.getByBillId(this.id).subscribe({
 
       next: (res) => {
@@ -146,23 +143,23 @@ bills: BillModel[]=[];
     })
   }
 
-  updateBillPolicy() {
-    // Update policy with the values from the form
-    this.billService.updateBill(this.id, this.bill)
-      .subscribe({
-        next: (res) => {
-          console.log(res);
-          this.router.navigate(['/viewbill']); // Navigate back to the policy list after successful update
-        },
-        error: (error) => {
-          console.log(error);
-        }
-      });
-  }
+  // updateBillPolicy() {
+  //   // Update policy with the values from the form
+  //   this.billService.updateBill(this.id, this.bill)
+  //     .subscribe({
+  //       next: (res) => {
+  //         console.log(res);
+  //         this.router.navigate(['/viewbill']); // Navigate back to the policy list after successful update
+  //       },
+  //       error: (error) => {
+  //         console.log(error);
+  //       }
+  //     });
+  // }
 
-  loadPolicyById(){
+  loadPolicyById() {
 
-     this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params['id'];
     this.policiesService.getByPolicyId(this.id).subscribe({
 
       next: (res) => {
