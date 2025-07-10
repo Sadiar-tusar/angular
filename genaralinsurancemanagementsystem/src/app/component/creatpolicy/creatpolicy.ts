@@ -90,6 +90,7 @@ formValue!: FormGroup;
           this.formValue.reset();
           // this.fetchLastBillNo(); // Fetch the last bill number again if needed
           this.router.navigate(['/viewpolicy']);
+          
         },
         error: (err) => {
           console.log(err);

@@ -23,8 +23,7 @@ import { Updatepolicy } from './component/updatepolicy/updatepolicy';
 import { Bill } from './component/bill/bill';
 import { Creatbill } from './component/creatbill/creatbill';
 import { Updatebill } from './component/updatebill/updatebill';
-import { Reciept } from './component/reciept/reciept';
-import { Creatreciept } from './component/creatreciept/creatreciept';
+
 
 
 
@@ -50,8 +49,7 @@ import { Creatreciept } from './component/creatreciept/creatreciept';
     Bill,
     Creatbill,
     Updatebill,
-    Reciept,
-    Creatreciept,
+   
    
     
   ],

@@ -143,19 +143,7 @@ export class Updatebill implements OnInit {
     })
   }
 
-  // updateBillPolicy() {
-  //   // Update policy with the values from the form
-  //   this.billService.updateBill(this.id, this.bill)
-  //     .subscribe({
-  //       next: (res) => {
-  //         console.log(res);
-  //         this.router.navigate(['/viewbill']); // Navigate back to the policy list after successful update
-  //       },
-  //       error: (error) => {
-  //         console.log(error);
-  //       }
-  //     });
-  // }
+
 
   loadPolicyById() {
 
