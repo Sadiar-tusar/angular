@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PolicyModel } from '../../model/policy';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BillModel } from '../../model/bill.model';
 import { ReceiptModel } from '../../model/receipt.model';
 import { ReceiptService } from '../../service/receipt.service';
@@ -32,30 +32,40 @@ export class Creatreciept implements OnInit{
   ){}
 
   ngOnInit(): void {
+
+    this.loadBill(),
+    this.loadPolicies
+
   this.receiptForm= this.formBuilder.group({
-    id:[''],
+    // id:[''],
+    issuingOffice: [''],
+      classOfInsurance: [''],
+      date: [''],
+      modeOfPayment: [''],
+      issuedAgainst: [''],
     bill: this.formBuilder.group({
-      fire:[undefined],
-      rsd:[undefined],
-      netPremium:[undefined],
-      tax:[undefined],
-      grossPremium:[undefined],
+      id:[''],
+      fire:[''],
+      rsd:[''],
+      netPremium:[''],
+      tax:[''],
+      grossPremium:[''],
       policies:this.formBuilder.group({
-        id:[undefined],
-        billNo:[undefined],
-        date:[undefined],
-        bankName:[undefined],
-        policyholder:[undefined],
-        address:[undefined],
-        sumInsured:[undefined],
-        stockInsured:[undefined],
-        interestInsured:[undefined],
-        location:[undefined],
-        construction:[undefined],
-        owner:[undefined],
-        usedAs:[undefined],
-        priodFrom:[undefined],
-        priodTo:[undefined]
+        id:[''],
+        billNo:[''],
+        date:[''],
+        bankName:[''],
+        policyholder:[''],
+        address:[''],
+        sumInsured:[''],
+        stockInsured:[''],
+        interestInsured:[''],
+        location:[''],
+        construction:[''],
+        owner:[''],
+        usedAs:[''],
+        priodFrom:[''],
+        priodTo:['']
       })
     })
   });

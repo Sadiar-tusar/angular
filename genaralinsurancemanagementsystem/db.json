@@ -247,6 +247,34 @@
           "periodTo": "2025-09-01"
         }
       }
+    },
+    {
+      "id": "c30d",
+      "bill": {
+        "id": "",
+        "fire": 2,
+        "rsd": 2,
+        "netPremium": 6000000,
+        "tax": "",
+        "grossPremium": 6900000,
+        "policies": {
+          "id": "e243",
+          "billNo": 1001,
+          "date": "2024-09-01",
+          "bankName": "Islami Bank Bangladesh PLC, Dhanmondi Branch, Dhaka",
+          "policyholder": "Arif Shop",
+          "address": "lalbagh Roard , Lalabagh Dhaka 1203",
+          "sumInsured": 2000000,
+          "stockInsured": "food",
+          "interestInsured": "Hotel & Restaurants",
+          "location": "sdgcv",
+          "construction": "",
+          "owner": "",
+          "usedAs": "Shop Only",
+          "priodFrom": "",
+          "priodTo": ""
+        }
+      }
     }
   ]
 }
