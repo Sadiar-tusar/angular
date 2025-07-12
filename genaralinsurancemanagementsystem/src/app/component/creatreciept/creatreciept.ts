@@ -1,4 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PolicyModel } from '../../model/policy';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { BillModel } from '../../model/bill.model';
+import { ReceiptModel } from '../../model/receipt.model';
+import { ReceiptService } from '../../service/receipt.service';
+import { BilmodelService } from '../../service/bilmodel.service';
+import { PolicymodelService } from '../../service/policymodel.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-creatreciept',
@@ -6,6 +14,113 @@ import { Component } from '@angular/core';
   templateUrl: './creatreciept.html',
   styleUrl: './creatreciept.css'
 })
-export class Creatreciept {
+export class Creatreciept implements OnInit{
+
+  policies: PolicyModel[]=[];
+  billForm !: FormGroup;
+  bill: BillModel[]=[];
+  receipt: ReceiptModel=new ReceiptModel();
+  selectedBill?:BillModel;
+  receiptForm!:FormGroup;
+
+  constructor(
+    private receiptService: ReceiptService,
+    private billService: BilmodelService,
+    private policyService: PolicymodelService,
+    private formBuilder: FormBuilder,
+    private router: Router
+  ){}
+
+  ngOnInit(): void {
+  this.receiptForm= this.formBuilder.group({
+    id:[''],
+    bill: this.formBuilder.group({
+      fire:[undefined],
+      rsd:[undefined],
+      netPremium:[undefined],
+      tax:[undefined],
+      grossPremium:[undefined],
+      policies:this.formBuilder.group({
+        id:[undefined],
+        billNo:[undefined],
+        date:[undefined],
+        bankName:[undefined],
+        policyholder:[undefined],
+        address:[undefined],
+        sumInsured:[undefined],
+        stockInsured:[undefined],
+        interestInsured:[undefined],
+        location:[undefined],
+        construction:[undefined],
+        owner:[undefined],
+        usedAs:[undefined],
+        priodFrom:[undefined],
+        priodTo:[undefined]
+      })
+    })
+  });
+  this.receiptForm.get('bill.policies.policyholder')?.valueChanges.subscribe(policyholder=>{
+    this.selectedBill=this.bill.find(bill=>bill.policies.policyholder===policyholder);
+    console.log(this.selectedBill);
+    if(this.selectedBill){
+      this.receiptForm.patchValue({
+        bill:{
+          ...this.receiptForm.get('bill')?.value,
+          fire:this.selectedBill.fire,
+          rsd:this.selectedBill.rsd,
+          netPremium:this.selectedBill.netPremium,
+          grossPremium:this.selectedBill.grossPremium,
+          policies: this.selectedBill.policies
+          
+        },
+
+      })
+    }
+  });
+  }
+
+  loadPolicies(): void{
+   this.policyService.viewAllPolicyForBill().subscribe({
+    next:(res)=>{
+      this.policies=res;
+      console.log(this.policies);
+    },
+    error:(err)=>{
+      console.log(err);
+    }
+   });
+  }
+
+  loadBill():void{
+    this.billService.getAllBillForReciept().subscribe({
+      next:(res)=>{
+        this.bill=res;
+      },
+      error:(err)=>{
+        console.log(err);
+      }
+    });
+  }
+
+  creatReceipt(): void{
+    if(this.receiptForm.valid){
+      const formValues = this.receiptForm.value;
+      this.receipt.bill = formValues.bill;
+      this.receiptService.creatRecipt(this.receipt).subscribe({
+        next:(res)=>{
+          this.loadBill();
+          this.loadPolicies();
+          this.receiptForm.reset();
+          this.router.navigate(['viewreciept']);
+        },
+        error:(err)=>{
+          console.log(err);
+        }
+      });
+    }
+    else{
+      console.warn('Form is Invalid');
+    }
+  }
 
 }

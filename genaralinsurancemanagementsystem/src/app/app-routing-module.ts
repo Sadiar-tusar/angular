@@ -15,6 +15,8 @@ import { Updatepolicy } from './component/updatepolicy/updatepolicy';
 import { Bill } from './component/bill/bill';
 import { Creatbill } from './component/creatbill/creatbill';
 import { Updatebill } from './component/updatebill/updatebill';
+import { Reciept } from './component/reciept/reciept';
+import { Creatreciept } from './component/creatreciept/creatreciept';
 
 
 const routes: Routes = [
@@ -35,6 +37,9 @@ const routes: Routes = [
    { path: "viewbill", component: Bill },
   { path: "createbill", component: Creatbill },
   { path: "updatebill/:id", component: Updatebill},
+   { path: "viewreciept", component: Reciept},
+   { path: "createreceipt", component: Creatreciept}
+
   
 
 ];
