@@ -27,6 +27,7 @@ import { Reciept } from './component/reciept/reciept';
 import { Creatreciept } from './component/creatreciept/creatreciept';
 import { Carpolicy } from './component/car/carpolicy/carpolicy';
 import { Creatcarpolicy } from './component/car/creatcarpolicy/creatcarpolicy';
+import { Creatcarbill } from './component/creatbill/creatcarbill/creatcarbill';
 
 
 
@@ -56,7 +57,8 @@ import { Creatcarpolicy } from './component/car/creatcarpolicy/creatcarpolicy';
     Reciept,
     Creatreciept,
     Carpolicy,
-    Creatcarpolicy
+    Creatcarpolicy,
+    Creatcarbill
    
    
     

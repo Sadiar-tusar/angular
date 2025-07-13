@@ -6,6 +6,8 @@ import { Router } from '@angular/router';
 import { error } from 'node:console';
 import { PolicyModel } from '../../model/policy';
 import { forkJoin } from 'rxjs';
+import { CarModel } from '../../model/car.model';
+import { CarService } from '../../service/car.service';
 
 @Component({
   selector: 'app-bill',
@@ -17,12 +19,14 @@ export class Bill implements OnInit{
 
   policyes: PolicyModel[]=[];
   bills: BillModel[] = [];
+  // cars: CarModel[]=[];
 
 constructor(
     private policiesService: PolicymodelService,
     private billService: BilmodelService,
     private router: Router,
-    private cdr :ChangeDetectorRef
+    private cdr :ChangeDetectorRef,
+    // private carService: CarService
 
   ) { }
   ngOnInit(): void {
@@ -56,11 +60,13 @@ constructor(
   loadAllData():void{
     forkJoin({
     policyes: this.policiesService.viewAllPolicyForBill(),
+    // cars: this.carService.viewAllCarPolicyForBill(),
     bills: this.billService.viewAllBill()
     }).subscribe({
       next:({policyes, bills})=>{
         this.bills=bills;
         this.policyes=policyes;
+        // this.cars=this.cars;
         this.cdr.markForCheck();
       },
       error:(err)=>{
