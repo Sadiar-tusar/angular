@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ReceiptModel } from '../../model/receipt.model';
 
 import { ReceiptService } from '../../service/receipt.service';
@@ -22,6 +22,7 @@ constructor(
   
   private receiptService: ReceiptService,
   private router: Router,
+  private cdr: ChangeDetectorRef
  
 ){}
 
@@ -33,6 +34,7 @@ constructor(
     this.receiptService.getAllReciept().subscribe({
       next:(res)=>{
         this.moneyreceipts=res;
+        this.cdr.markForCheck();
         this.filteredMoneyReceipts=[...this.moneyreceipts];
       },
       error:(err)=>{
@@ -51,7 +53,10 @@ constructor(
       next:()=>{
         this.moneyreceipts=this.moneyreceipts.filter(receipt => receipt.id !==id);
         this.filteredMoneyReceipts= this.filteredMoneyReceipts.filter(receipt =>receipt.id !==id);
-        this.router.navigate(['/viewReceipt']);
+        this.cdr.markForCheck();
+        this.loadReceipts();
+        this.router.navigate(['/viewreciept']);
+        
       }
     });
   }

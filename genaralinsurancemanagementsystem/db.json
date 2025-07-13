@@ -221,41 +221,18 @@
   ],
   "reciept": [
     {
-      "id": "b996",
+      "id": "b2b7",
+      "issuingOffice": "Narail",
+      "classOfInsurance": "Fire Insurance",
+      "date": "2025-07-13",
+      "modeOfPayment": "Cash",
+      "issuedAgainst": "fsdfsfd",
       "bill": {
-        "fire": 0.1,
-        "rsd": 0.12,
-        "netPremium": 400000,
-        "tax": ".15",
-        "grossPremium": 460000,
-        "policies": {
-          "id": "e243",
-          "billNo": 1001,
-          "date": "2024-09-01",
-          "bankName": "Islami Bank Bangladesh PLC, Dhanmondi Branch, Dhaka",
-          "policyholder": "Kacci Bhai Restaurants , Prop: Md. Raju Chowdhury  ",
-          "address": "lalbagh Roard , Lalabagh Dhaka 1203",
-          "sumInsured": 2000000,
-          "stockInsured": "food",
-          "interestInsured": "Hotel & Restaurants",
-          "coverage": "Fire &/or Lightning only",
-          "location": "185/1 lalbagh Roard , Lalabagh Dhaka 1203",
-          "construction": "2nd Class",
-          "owner": "The Insured",
-          "usedAs": "Shop Only",
-          "periodFrom": "2024-09-01",
-          "periodTo": "2025-09-01"
-        }
-      }
-    },
-    {
-      "id": "c30d",
-      "bill": {
-        "id": "",
+        "id": "3ad1",
         "fire": 2,
         "rsd": 2,
         "netPremium": 6000000,
-        "tax": "",
+        "tax": ".15",
         "grossPremium": 6900000,
         "policies": {
           "id": "e243",
@@ -267,14 +244,67 @@
           "sumInsured": 2000000,
           "stockInsured": "food",
           "interestInsured": "Hotel & Restaurants",
-          "location": "sdgcv",
+          "location": "Narail, Sadar",
           "construction": "",
           "owner": "",
           "usedAs": "Shop Only",
-          "priodFrom": "",
-          "priodTo": ""
+          "periodFrom": "",
+          "periodTo": ""
         }
       }
+    },
+    {
+      "id": "5115",
+      "issuingOffice": "Dhaka",
+      "classOfInsurance": "Fire Insurance",
+      "date": "2025-07-13",
+      "modeOfPayment": "Cash",
+      "issuedAgainst": "dfsdgbdf",
+      "bill": {
+        "id": "854b",
+        "fire": 1,
+        "rsd": 1,
+        "netPremium": 50000,
+        "tax": ".15",
+        "grossPremium": 57500,
+        "policies": {
+          "id": "3d1e",
+          "billNo": 12,
+          "date": "2025-07-09",
+          "bankName": "Islami Bank",
+          "policyholder": "Akij Food & Bevarage",
+          "address": "Mohakhali",
+          "sumInsured": "50000",
+          "stockInsured": "Food",
+          "interestInsured": "Hotel & Restaurants",
+          "location": "12/sfghdf,Mohakhali",
+          "construction": "2nd class",
+          "owner": "The Insured",
+          "usedAs": "Shop Only",
+          "periodFrom": "2025-07-31",
+          "periodTo": "2025-08-30"
+        }
+      }
+    }
+  ],
+  "car": [
+    {
+      "id": "022b",
+      "billNo": 543456,
+      "date": "2025-07-13",
+      "bankName": "Dhaka Bank",
+      "policyholder": "Dragon Car House",
+      "address": "Dhanmondi",
+      "sumInsured": 2000000,
+      "stockInsured": "Engine",
+      "interestInsured": "Shop & company",
+      "coverage": "Engine Damage By Accident",
+      "location": "Dhanmondi 27",
+      "construction": "2nd class",
+      "owner": "Reja",
+      "usedAs": "Shop-Cum-Godown Only",
+      "periodFrom": "2025-07-31",
+      "periodTo": "2025-08-31"
     }
   ]
 }

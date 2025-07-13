@@ -6,3 +6,18 @@
 .btn-custom mat-icon {
     margin-right: 5px; /* Space between icon and button text */
 }
+/* .key-frames {
+  animation: slideInFromLeft 2s ease-out ;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+} */
+

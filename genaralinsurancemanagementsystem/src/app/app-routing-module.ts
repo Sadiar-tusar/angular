@@ -17,6 +17,8 @@ import { Creatbill } from './component/creatbill/creatbill';
 import { Updatebill } from './component/updatebill/updatebill';
 import { Reciept } from './component/reciept/reciept';
 import { Creatreciept } from './component/creatreciept/creatreciept';
+import { Carpolicy } from './component/car/carpolicy/carpolicy';
+import { Creatcarpolicy } from './component/car/creatcarpolicy/creatcarpolicy';
 
 
 const routes: Routes = [
@@ -38,7 +40,9 @@ const routes: Routes = [
   { path: "createbill", component: Creatbill },
   { path: "updatebill/:id", component: Updatebill},
    { path: "viewreciept", component: Reciept},
-   { path: "createreceipt", component: Creatreciept}
+   { path: "createreceipt", component: Creatreciept},
+   { path: "viewcarpolicy", component: Carpolicy},
+   { path: "createcarpolicy", component: Creatcarpolicy},
 
   
 

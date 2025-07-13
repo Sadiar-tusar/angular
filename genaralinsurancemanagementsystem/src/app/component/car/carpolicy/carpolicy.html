@@ -75,7 +75,7 @@
         <!-- Table Wrapper Row -->
          <div class="container">
             <div class="mb-5">
-                <button type="button" class="add-button rounded" routerLink="/createpolicy"><h4><b><i>Add Policy</i></b></h4></button>
+                <button type="button" class="add-button rounded" routerLink="/createcarpolicy"><h4><b><i>Add Policy</i></b></h4></button>
             </div>
          </div>
          <div class="">
@@ -86,7 +86,7 @@
             <div class="col-md-12">
                 <div class="table-wrapper">
                     <!-- Table Rows -->
-                    <div class="table-row" *ngFor="let pol of policies | async ">
+                    <div class="table-row" *ngFor="let pol of car | async ">
                         <div class="table-cell">
                             <div class="data-row">
                                 <strong>Bill No:</strong> <span>{{pol.billNo }}</span>
@@ -136,10 +136,10 @@
                         </div>
 
                         <div class="action-cell">
-                            <button type="button" class="btn btn-warning" aria-label="Edit policy" (click)="getPolicyById(pol.id)">
+                            <button type="button" class="btn btn-warning" aria-label="Edit policy" (click)="getCarPolicyById(pol.id)">
                                 <i class="fas fa-edit"></i>
                             </button>
-                            <button type="button" class="btn btn-danger" aria-label="Delete policy" (click)="deletePolicy(pol.id)">
+                            <button type="button" class="btn btn-danger" aria-label="Delete policy" (click)="deleteCarPolicy(pol.id)">
                                 <i class="fas fa-trash"></i>
                             </button>
                         </div>

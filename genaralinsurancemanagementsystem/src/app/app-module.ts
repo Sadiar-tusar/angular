@@ -25,6 +25,8 @@ import { Creatbill } from './component/creatbill/creatbill';
 import { Updatebill } from './component/updatebill/updatebill';
 import { Reciept } from './component/reciept/reciept';
 import { Creatreciept } from './component/creatreciept/creatreciept';
+import { Carpolicy } from './component/car/carpolicy/carpolicy';
+import { Creatcarpolicy } from './component/car/creatcarpolicy/creatcarpolicy';
 
 
 
@@ -52,7 +54,9 @@ import { Creatreciept } from './component/creatreciept/creatreciept';
     Creatbill,
     Updatebill,
     Reciept,
-    Creatreciept
+    Creatreciept,
+    Carpolicy,
+    Creatcarpolicy
    
    
     
