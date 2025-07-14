@@ -98,19 +98,19 @@ this.carBillService.getByCarBillId(id).subscribe({
   }
 
   getCarRate(carBill: CarBillModel): number {
-    const sumInsured = carBill.car?.sumInsured || 0;
+    const sumInsured = carBill.cars?.sumInsured || 0;
     const carRate = carBill.carRate || 0;
     return sumInsured * carRate;
   }
 
   getRsdAmount(carBill: CarBillModel): number {
-    const sumInsured = carBill.car?.sumInsured || 0;
+    const sumInsured = carBill.cars?.sumInsured || 0;
     const rsdRate = carBill.rsd || 0;
     return sumInsured * rsdRate;
   }
 
   getNetPremium(carBill: CarBillModel): number {
-    const sumInsured = carBill.car.sumInsured || 0;
+    const sumInsured = carBill.cars.sumInsured || 0;
     const carRate = carBill.carRate || 0;
     const rsdRate = carBill.rsd || 0;
 

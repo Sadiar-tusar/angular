@@ -333,6 +333,32 @@
       "periodTo": "2025-08-31"
     }
   ],
-
-  "carbill":[]
+  "carbill": [
+    {
+      "id": "2a27",
+      "carRate": 2,
+      "rsd": 2,
+      "netPremium": 6000000,
+      "tax": ".15",
+      "grossPremium": 6900000,
+      "cars": {
+        "id": "022b",
+        "billNo": 543456,
+        "date": "2025-07-13",
+        "bankName": "Dhaka Bank",
+        "policyholder": "Dragon Car House",
+        "address": "Dhanmondi",
+        "sumInsured": 2000000,
+        "stockInsured": "Engine",
+        "interestInsured": "Shop & company",
+        "coverage": "Engine Damage By Accident",
+        "location": "Dhanmondi 27",
+        "construction": "2nd class",
+        "owner": "Reja",
+        "usedAs": "Shop-Cum-Godown Only",
+        "periodFrom": "2025-07-31",
+        "periodTo": "2025-08-31"
+      }
+    }
+  ]
 }

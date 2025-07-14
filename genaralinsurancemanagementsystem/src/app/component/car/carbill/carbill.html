@@ -45,10 +45,10 @@
     </thead>
     <tbody>
       <tr *ngFor="let cbill of carBill">
-        <td>{{ cbill.car.policyholder }}</td>
-        <td>{{ cbill.car.stockInsured }}</td>
-        <td>{{ cbill.car.construction }}</td>
-        <td>{{ cbill.car.sumInsured | currency:'TK':'symbol' }}</td>
+        <td>{{ cbill.cars.policyholder }}</td>
+        <td>{{ cbill.cars.stockInsured }}</td>
+        <td>{{ cbill.cars.construction }}</td>
+        <td>{{ cbill.cars.sumInsured | currency:'TK':'symbol' }}</td>
         <td>{{ getCarRate(cbill) | currency:'TK':'symbol' }}</td>
         <td>{{ getRsdAmount(cbill) | currency:'TK':'symbol' }}</td>
         <td>{{ getNetPremium(cbill) | currency:'TK':'symbol' }}</td>
