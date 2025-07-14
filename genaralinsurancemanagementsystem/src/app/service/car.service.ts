@@ -8,7 +8,7 @@ import { CarModel } from '../model/car.model';
 })
 export class CarService {
 
-  baseUrl: string="http://localhost:3000/car";
+  baseUrl: string="http://localhost:3000/cars";
 
   constructor(private http :HttpClient) { }
 

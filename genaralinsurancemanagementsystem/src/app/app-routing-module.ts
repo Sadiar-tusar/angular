@@ -20,6 +20,7 @@ import { Creatreciept } from './component/creatreciept/creatreciept';
 import { Carpolicy } from './component/car/carpolicy/carpolicy';
 import { Creatcarpolicy } from './component/car/creatcarpolicy/creatcarpolicy';
 import { Creatcarbill } from './component/creatbill/creatcarbill/creatcarbill';
+import { Carbill } from './component/car/carbill/carbill';
 
 
 const routes: Routes = [
@@ -45,6 +46,7 @@ const routes: Routes = [
    { path: "viewcarpolicy", component: Carpolicy},
    { path: "createcarpolicy", component: Creatcarpolicy},
    { path: "creatcarbill", component: Creatcarbill},
+   { path: "viewcarbil", component: Carbill},
 
   
 

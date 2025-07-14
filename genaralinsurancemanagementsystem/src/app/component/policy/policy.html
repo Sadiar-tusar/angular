@@ -82,11 +82,11 @@
 
          </div>
          
-        <div class="row" style="background-color: bisque;">
+        <div class="row">
             <div class="col-md-12">
                 <div class="table-wrapper">
                     <!-- Table Rows -->
-                    <div class="table-row" *ngFor="let pol of policies | async ">
+                    <div class="table-row mb-4" *ngFor="let pol of policies | async ">
                         <div class="table-cell">
                             <div class="data-row">
                                 <strong>Bill No:</strong> <span>{{pol.billNo }}</span>
@@ -148,6 +148,8 @@
             </div>
         </div>
     </div>
+    
+    
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

@@ -217,6 +217,32 @@
         "periodFrom": "2025-07-31",
         "periodTo": "2025-08-30"
       }
+    },
+    {
+      "id": "5e0b",
+      "fire": 2,
+      "rsd": 1,
+      "netPremium": 4000000,
+      "tax": ".15",
+      "grossPremium": 4600000,
+      "policies": {
+        "id": "e243",
+        "billNo": 1001,
+        "date": "2024-09-01",
+        "bankName": "Islami Bank Bangladesh PLC, Dhanmondi Branch, Dhaka",
+        "policyholder": "Rajdhani Resturent , Prop: Md. Raju Chowdhury  ",
+        "address": "lalbagh Roard , Lalabagh Dhaka 1203",
+        "sumInsured": 2000000,
+        "stockInsured": "food",
+        "interestInsured": "Hotel & Restaurants",
+        "coverage": "Fire &/or Lightning only",
+        "location": "185/1 lalbagh Roard , Lalabagh Dhaka 1203",
+        "construction": "2nd Class",
+        "owner": "The Insured",
+        "usedAs": "Shop Only",
+        "periodFrom": "2024-09-01",
+        "periodTo": "2025-09-01"
+      }
     }
   ],
   "reciept": [
@@ -287,7 +313,7 @@
       }
     }
   ],
-  "car": [
+  "cars": [
     {
       "id": "022b",
       "billNo": 543456,
@@ -306,5 +332,7 @@
       "periodFrom": "2025-07-31",
       "periodTo": "2025-08-31"
     }
-  ]
+  ],
+
+  "carbill":[]
 }

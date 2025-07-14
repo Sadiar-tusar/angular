@@ -58,9 +58,7 @@ this.policyService.getByPolicyId(id).subscribe({
 })
   }
 
-  // editPolicy(id: string) {
-  //   this.router.navigate(['/updatepolicy', id]);
-  // }
+  
 
 
 }

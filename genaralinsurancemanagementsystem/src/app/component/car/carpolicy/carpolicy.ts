@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class Carpolicy implements OnInit{
 
-   car: any;
+   cars: any;
 
   constructor(
    private carService: CarService,   
@@ -26,7 +26,7 @@ export class Carpolicy implements OnInit{
   }
 
   loadCarPolicy(): void{
-    this.car=this.carService.getAllCarPolicy();
+    this.cars=this.carService.getAllCarPolicy();
     this.cdr.markForCheck();
   }
 
