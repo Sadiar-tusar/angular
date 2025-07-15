@@ -311,6 +311,72 @@
           "periodTo": "2025-08-30"
         }
       }
+    },
+    {
+      "id": "a043",
+      "issuingOffice": "Rangpur",
+      "classOfInsurance": "Fire Insurance",
+      "date": "2025-07-15",
+      "modeOfPayment": "Cash",
+      "issuedAgainst": "jhsfsdfdhsf",
+      "bill": {
+        "id": "5e0b",
+        "fire": 2,
+        "rsd": 1,
+        "netPremium": 4000000,
+        "tax": ".15",
+        "grossPremium": 4600000,
+        "policies": {
+          "id": "e243",
+          "billNo": 1001,
+          "date": "2024-09-01",
+          "bankName": "Islami Bank Bangladesh PLC, Dhanmondi Branch, Dhaka",
+          "policyholder": "Rajdhani Resturent , Prop: Md. Raju Chowdhury  ",
+          "address": "lalbagh Roard , Lalabagh Dhaka 1203",
+          "sumInsured": 2000000,
+          "stockInsured": "food",
+          "interestInsured": "Hotel & Restaurants",
+          "location": "185/1 lalbagh Roard , Lalabagh Dhaka 1203",
+          "construction": "2nd Class",
+          "owner": "The Insured",
+          "usedAs": "Shop Only",
+          "periodFrom": "2024-09-01",
+          "periodTo": "2025-09-01"
+        }
+      }
+    },
+    {
+      "id": "bec8",
+      "issuingOffice": "Dhaka",
+      "classOfInsurance": "Fire Insurance",
+      "date": "2025-07-31",
+      "modeOfPayment": "Cash",
+      "issuedAgainst": "",
+      "bill": {
+        "id": "3ad1",
+        "fire": 2,
+        "rsd": 2,
+        "netPremium": 6000000,
+        "tax": ".15",
+        "grossPremium": 6900000,
+        "policies": {
+          "id": "e243",
+          "billNo": 1001,
+          "date": "2024-09-01",
+          "bankName": "Islami Bank Bangladesh PLC, Dhanmondi Branch, Dhaka",
+          "policyholder": "Arif Shop",
+          "address": "lalbagh Roard , Lalabagh Dhaka 1203",
+          "sumInsured": 2000000,
+          "stockInsured": "food",
+          "interestInsured": "Hotel & Restaurants",
+          "location": "sdgcv",
+          "construction": "",
+          "owner": "",
+          "usedAs": "Shop Only",
+          "periodFrom": "",
+          "periodTo": ""
+        }
+      }
     }
   ],
   "cars": [
