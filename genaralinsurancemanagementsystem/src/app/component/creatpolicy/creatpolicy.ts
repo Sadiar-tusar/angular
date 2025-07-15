@@ -24,7 +24,7 @@ formValue!: FormGroup;
   ){}
 
   ngOnInit(): void {
-  //  const currentDate = new Date().toISOString().substring(0, 10); 
+   const currentDate = new Date().toISOString().substring(0, 10); 
 
    this.formValue = this.formBuilder.group({
       billNo: [''],
@@ -45,16 +45,16 @@ formValue!: FormGroup;
 
        });
 
-    // this.formValue.get('periodFrom')?.valueChanges.subscribe(value => {
-    //   if (value) {
-    //     const periodFromDate = new Date(value);
-    //     const periodToDate = new Date(periodFromDate);
-    //     periodToDate.setFullYear(periodFromDate.getFullYear() + 1);
-    //     this.formValue.patchValue({
-    //       periodTo: periodToDate.toISOString().substring(0, 10) 
-    //     }, { emitEvent: false });
-    //   }
-    // });
+    this.formValue.get('periodFrom')?.valueChanges.subscribe(value => {
+      if (value) {
+        const periodFromDate = new Date(value);
+        const periodToDate = new Date(periodFromDate);
+        periodToDate.setFullYear(periodFromDate.getFullYear() + 1);
+        this.formValue.patchValue({
+          periodTo: periodToDate.toISOString().substring(0, 10) 
+        }, { emitEvent: false });
+      }
+    });
 
     // this.fetchLastBillNo(); // Fetch last bill number once
   }

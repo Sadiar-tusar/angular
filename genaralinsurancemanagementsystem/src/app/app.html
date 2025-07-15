@@ -6,7 +6,11 @@
         <i class="fas fa-building"></i>
       </div>
       <div class="sidebar-brand-text mx-3 text-warning"><i class="fa-solid fa-house"></i>
-        <h4><b> Green General Insurance </b></h4>
+
+        
+        <img src="/img/download.png" style="height: 100px; width: 100px;">
+
+
       </div>
     </a>
 
@@ -54,13 +58,12 @@
       </a>
       <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item" href="viewpolicy">Show All Policy</a>
-          <a class="collapse-item" href="createpolicy">Add Policy</a>
-          <a class="collapse-item" href="updatepolicy/:id">Update Policy</a>
-          <a class="collapse-item" href="viewbill">View Bill</a>
-          <a class="collapse-item" href="creatcarbill">Creat Bill</a>
-          <a class="collapse-item" href="createreceipt">Add Receipt</a>
-          <a class="collapse-item" href="viewreciept">View Receipt</a>
+          <a class="collapse-item" href="viewpolicy">Show Fire Policy</a>
+          <a class="collapse-item" href="viewcarpolicy">Show Car Policy</a>
+          <a class="collapse-item" href="viewbill">View Fire Bill</a>
+          <a class="collapse-item" href="viewcarbil">View Car Bill</a>
+          <a class="collapse-item" href="createreceipt">Add Fire Receipt</a>
+          <a class="collapse-item" href="viewreciept">View Fire Receipt</a>
         </div>
       </div>
     </li>
@@ -129,7 +132,7 @@
           </li>
 
           <!-- creat bill nav-->
-           
+
           <form class="d-flex align-items-center" [formGroup]="routingForm">
             <label for="billType" class="text-white me-2 mb-0"><b>Create Bill</b></label>
             <select class="form-select form-select-sm me-2" formControlName="routing" (change)="visitRouter()"
@@ -139,7 +142,7 @@
               <option value="creatcarbil"><b>Car Bill</b></option>
             </select>
           </form>
-         
+
 
 
           <!-- Nav Item - Search Dropdown (Visible Only XS) -->
