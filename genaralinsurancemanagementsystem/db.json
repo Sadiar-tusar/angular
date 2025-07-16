@@ -53,6 +53,24 @@
       "periodFrom": "2025-07-31",
       "periodTo": "2025-08-30",
       "id": "865b"
+    },
+    {
+      "id": "353a",
+      "billNo": 25,
+      "date": "2025-07-15",
+      "bankName": "Pubali Bank",
+      "policyholder": "Atiq Food House",
+      "address": "Dhanmondi 27",
+      "sumInsured": 100000,
+      "stockInsured": "Food",
+      "interestInsured": "Resturent & Shop",
+      "coverage": "Fire Or Lightning only",
+      "location": "Dhanmondi",
+      "construction": "2nd class",
+      "owner": "Atiq",
+      "usedAs": "Shop-Cum-Godown Only",
+      "periodFrom": "2025-07-31",
+      "periodTo": "2026-07-31"
     }
   ],
   "user": [
@@ -243,6 +261,32 @@
         "periodFrom": "2024-09-01",
         "periodTo": "2025-09-01"
       }
+    },
+    {
+      "id": "ef9f",
+      "fire": 10,
+      "rsd": 10,
+      "netPremium": 1100000,
+      "tax": ".15",
+      "grossPremium": 1265000,
+      "policies": {
+        "id": "353a",
+        "billNo": 25,
+        "date": "2025-07-15",
+        "bankName": "Pubali Bank",
+        "policyholder": "Atiq Food House",
+        "address": "Dhanmondi 27",
+        "sumInsured": 100000,
+        "stockInsured": "Food",
+        "interestInsured": "Resturent & Shop",
+        "coverage": "Fire Or Lightning only",
+        "location": "Dhanmondi",
+        "construction": "2nd class",
+        "owner": "Atiq",
+        "usedAs": "Shop-Cum-Godown Only",
+        "periodFrom": "2025-07-31",
+        "periodTo": "2026-07-31"
+      }
     }
   ],
   "reciept": [
@@ -276,39 +320,6 @@
           "usedAs": "Shop Only",
           "periodFrom": "",
           "periodTo": ""
-        }
-      }
-    },
-    {
-      "id": "5115",
-      "issuingOffice": "Dhaka",
-      "classOfInsurance": "Fire Insurance",
-      "date": "2025-07-13",
-      "modeOfPayment": "Cash",
-      "issuedAgainst": "dfsdgbdf",
-      "bill": {
-        "id": "854b",
-        "fire": 1,
-        "rsd": 1,
-        "netPremium": 50000,
-        "tax": ".15",
-        "grossPremium": 57500,
-        "policies": {
-          "id": "3d1e",
-          "billNo": 12,
-          "date": "2025-07-09",
-          "bankName": "Islami Bank",
-          "policyholder": "Akij Food & Bevarage",
-          "address": "Mohakhali",
-          "sumInsured": "50000",
-          "stockInsured": "Food",
-          "interestInsured": "Hotel & Restaurants",
-          "location": "12/sfghdf,Mohakhali",
-          "construction": "2nd class",
-          "owner": "The Insured",
-          "usedAs": "Shop Only",
-          "periodFrom": "2025-07-31",
-          "periodTo": "2025-08-30"
         }
       }
     },
@@ -375,6 +386,39 @@
           "usedAs": "Shop Only",
           "periodFrom": "",
           "periodTo": ""
+        }
+      }
+    },
+    {
+      "id": "1c9f",
+      "issuingOffice": "Dhaka",
+      "classOfInsurance": "Fire Insurance",
+      "date": "2025-07-31",
+      "modeOfPayment": "Cash",
+      "issuedAgainst": "dfsdgbdf",
+      "bill": {
+        "id": "ef9f",
+        "fire": 10,
+        "rsd": 10,
+        "netPremium": 1100000,
+        "tax": ".15",
+        "grossPremium": 1265000,
+        "policies": {
+          "id": "353a",
+          "billNo": 25,
+          "date": "2025-07-15",
+          "bankName": "Pubali Bank",
+          "policyholder": "Atiq Food House",
+          "address": "Dhanmondi 27",
+          "sumInsured": 100000,
+          "stockInsured": "Food",
+          "interestInsured": "Resturent & Shop",
+          "location": "Dhanmondi",
+          "construction": "2nd class",
+          "owner": "Atiq",
+          "usedAs": "Shop-Cum-Godown Only",
+          "periodFrom": "2025-07-31",
+          "periodTo": "2026-07-31"
         }
       }
     }

@@ -21,6 +21,7 @@ import { Carpolicy } from './component/car/carpolicy/carpolicy';
 import { Creatcarpolicy } from './component/car/creatcarpolicy/creatcarpolicy';
 import { Carbill } from './component/car/carbill/carbill';
 import { Carbillcreat } from './component/car/carbillcreat/carbillcreat';
+import { PrintFireCoverNote } from './component/print-fire-cover-note/print-fire-cover-note';
 
 
 const routes: Routes = [
@@ -47,6 +48,7 @@ const routes: Routes = [
    { path: "createcarpolicy", component: Creatcarpolicy},
    { path: "viewcarbil", component: Carbill},
    { path: "creatcarbil", component: Carbillcreat},
+   { path: "print-fire-cover-note/:id", component: PrintFireCoverNote},
 
   
 
