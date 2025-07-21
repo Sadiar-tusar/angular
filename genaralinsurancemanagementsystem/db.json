@@ -71,6 +71,24 @@
       "usedAs": "Shop-Cum-Godown Only",
       "periodFrom": "2025-07-31",
       "periodTo": "2026-07-31"
+    },
+    {
+      "id": "8ab2",
+      "billNo": 2,
+      "date": "2025-07-21",
+      "bankName": "Pubali Bank",
+      "policyholder": "Reja Food & Beverise",
+      "address": "Uttara",
+      "sumInsured": 50000,
+      "stockInsured": "Food",
+      "interestInsured": "rrrere",
+      "coverage": "Fire&Lighting only",
+      "location": "Uttara, Sector 4",
+      "construction": "2nd class",
+      "owner": "Reja",
+      "usedAs": "Shop Only",
+      "periodFrom": "2025-07-31",
+      "periodTo": "2026-07-31"
     }
   ],
   "user": [
@@ -96,8 +114,7 @@
       "password": "12345678",
       "photo": "https://img.freepik.com/free-vector/modern-fast-food-composition_23-2147861160.jpg",
       "role": "user",
-      "billNo":"1c9f"
-      
+      "billNo": "1c9f"
     },
     {
       "id": "85b7",
@@ -286,6 +303,32 @@
         "construction": "2nd class",
         "owner": "Atiq",
         "usedAs": "Shop-Cum-Godown Only",
+        "periodFrom": "2025-07-31",
+        "periodTo": "2026-07-31"
+      }
+    },
+    {
+      "id": "462a",
+      "fire": 10,
+      "rsd": null,
+      "netPremium": 50000,
+      "tax": ".15",
+      "grossPremium": 57500,
+      "policies": {
+        "id": "8ab2",
+        "billNo": 2,
+        "date": "2025-07-21",
+        "bankName": "Pubali Bank",
+        "policyholder": "Reja Food & Beverise",
+        "address": "Uttara",
+        "sumInsured": 50000,
+        "stockInsured": "Food",
+        "interestInsured": "rrrere",
+        "coverage": "Fire&Lighting only",
+        "location": "Uttara, Sector 4",
+        "construction": "2nd class",
+        "owner": "Reja",
+        "usedAs": "Shop Only",
         "periodFrom": "2025-07-31",
         "periodTo": "2026-07-31"
       }
