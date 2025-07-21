@@ -41,6 +41,9 @@ export class BilmodelService {
   getByBillId(id: string): Observable<BillModel> {
     return this.http.get<BillModel>(this.baseUrl+"/"+ id);
   }
+  getBillNoById(id: string): Observable<BillModel> {
+    return this.http.get<BillModel>(this.baseUrl+"/"+ id);
+  }
 
   
 

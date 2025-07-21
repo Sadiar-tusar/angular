@@ -6,5 +6,6 @@ export class User {
     password!: string;
     role!: string;
     photo!: string;
+    billNo!:string;
 
 }

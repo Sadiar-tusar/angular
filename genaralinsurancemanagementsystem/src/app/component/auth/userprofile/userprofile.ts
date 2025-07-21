@@ -1,9 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { User } from '../../../model/user.model';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../../../service/auth.service';
 import { Router } from '@angular/router';
 import { UserService } from '../../../service/user.service';
+import { BilmodelService } from '../../../service/bilmodel.service';
+import { BillModel } from '../../../model/bill.model';
+import { ReceiptModel } from '../../../model/receipt.model';
+import { ReceiptService } from '../../../service/receipt.service';
 
 @Component({
   selector: 'app-userprofile',
@@ -14,12 +18,17 @@ import { UserService } from '../../../service/user.service';
 export class Userprofile implements OnInit{
 
    user: User | null = null;
+   bill: BillModel | null=null;
+   receipt: ReceiptModel | null=null;
   private subscription: Subscription = new Subscription();
 
   constructor(
     private authService: AuthService, // ✅ fixed spelling
     private router: Router,
-    private userSer: UserService
+    private userSer: UserService,
+    private billService: BilmodelService,
+    private receiptService: ReceiptService,
+    private cdr: ChangeDetectorRef
   ) { }
   ngOnInit(): void {
     this.loadUserProfile();
@@ -31,6 +40,8 @@ export class Userprofile implements OnInit{
         console.log(res);
         if(res){
           this.user=res;
+          this.getUserShowPolicyByBillNo(this.user.billNo);
+          this.cdr.markForCheck();
         }
       },
       error:(err)=>{
@@ -44,6 +55,16 @@ export class Userprofile implements OnInit{
 
   ngOnDestroy(): void{
     this.subscription.unsubscribe();
+  }
+
+  getUserShowPolicyByBillNo(billNo:string):void{
+    this.receiptService.getReciptById(billNo).subscribe({
+      next:(data)=>{
+      this.receipt=data;
+      this.cdr.markForCheck();
+      }
+
+    });
   }
 
 }

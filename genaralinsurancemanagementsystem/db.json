@@ -94,8 +94,10 @@
       "name": "Sadiar Rahman",
       "email": "sadiar@gmail.com",
       "password": "12345678",
-      "photo": "https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg",
-      "role": "user"
+      "photo": "https://img.freepik.com/free-vector/modern-fast-food-composition_23-2147861160.jpg",
+      "role": "user",
+      "billNo":"1c9f"
+      
     },
     {
       "id": "85b7",
@@ -394,6 +396,39 @@
       "issuingOffice": "Dhaka",
       "classOfInsurance": "Fire Insurance",
       "date": "2025-07-31",
+      "modeOfPayment": "Cash",
+      "issuedAgainst": "dfsdgbdf",
+      "bill": {
+        "id": "ef9f",
+        "fire": 10,
+        "rsd": 10,
+        "netPremium": 1100000,
+        "tax": ".15",
+        "grossPremium": 1265000,
+        "policies": {
+          "id": "353a",
+          "billNo": 25,
+          "date": "2025-07-15",
+          "bankName": "Pubali Bank",
+          "policyholder": "Atiq Food House",
+          "address": "Dhanmondi 27",
+          "sumInsured": 100000,
+          "stockInsured": "Food",
+          "interestInsured": "Resturent & Shop",
+          "location": "Dhanmondi",
+          "construction": "2nd class",
+          "owner": "Atiq",
+          "usedAs": "Shop-Cum-Godown Only",
+          "periodFrom": "2025-07-31",
+          "periodTo": "2026-07-31"
+        }
+      }
+    },
+    {
+      "id": "4d0e",
+      "issuingOffice": "Dhaka",
+      "classOfInsurance": "Fire Insurance",
+      "date": "2025-07-19",
       "modeOfPayment": "Cash",
       "issuedAgainst": "dfsdgbdf",
       "bill": {

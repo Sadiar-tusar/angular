@@ -66,7 +66,7 @@ constructor(
   }
 
   printFireCoverNote(id: string) {
-    this.router.navigate(['/print-fire-cover-note', id]);
+    this.router.navigate(['/printfirecovernote', id]);
   }
 
   navigateToAddReciept(){

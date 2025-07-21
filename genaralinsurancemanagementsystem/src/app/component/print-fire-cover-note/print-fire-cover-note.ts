@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ReceiptModel } from '../../model/receipt.model';
 import { ReceiptService } from '../../service/receipt.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -11,24 +11,27 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class PrintFireCoverNote implements OnInit {
 
- moneyreceipt?: ReceiptModel;
+ moneyreceipt!: ReceiptModel;
 
  constructor(
    private moneyreceiptService: ReceiptService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private cdr: ChangeDetectorRef
  ){}
 
   ngOnInit(): void {
      const id = this.route.snapshot.params['id'];
     this.moneyreceiptService.getReciptById(id).subscribe({
-      next: response => {
+      next: (response) => {
         this.moneyreceipt = response;
+        this.cdr.markForCheck();
       },
-      error: error => {
-        alert(error);
+      error: (error) => {
+        console.log(error);
       }
     });
+    // this.isDataLoaded();
   }
 
    getSumInsured(): number {
@@ -108,5 +111,9 @@ export class PrintFireCoverNote implements OnInit {
       const sumInsuredAmount = this.getSumInsured();
       return this.convertAmountToWords(sumInsuredAmount);
     }
+
+     isDataLoaded(): boolean {
+    return !!this.moneyreceipt;
+  }
 
 }
