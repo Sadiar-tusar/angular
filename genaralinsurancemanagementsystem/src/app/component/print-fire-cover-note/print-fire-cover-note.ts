@@ -2,6 +2,8 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ReceiptModel } from '../../model/receipt.model';
 import { ReceiptService } from '../../service/receipt.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 declare var html2pdf: any;
 
@@ -119,20 +121,27 @@ export class PrintFireCoverNote implements OnInit {
   }
 
   printStatement(): void {
-    const element = document.getElementById('statementTable');
-    const opt = {
-      margin: 0.5,
-      filename: `fire-statement-${this.moneyreceipt.id}.pdf`,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-    };
+  const element = document.querySelector('.container') as HTMLElement;
 
-    if (element) {
-      html2pdf().set(opt).from(element).save();
-    } else {
-      alert('Nothing to print!');
-    }
+  if (!element) {
+    alert('Nothing to print!');
+    return;
   }
+
+  // Use html2canvas to capture the HTML content
+  html2canvas(element, { scale: 2 }).then((canvas) => {
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jsPDF('p', 'mm', 'a4');
+
+    const imgProps = (pdf as any).getImageProperties(imgData);
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    pdf.save(`fire-statement-${this.moneyreceipt.id}.pdf`);
+  });
+}
+
+
 
 }
