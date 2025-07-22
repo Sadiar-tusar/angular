@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CarModel } from '../../../model/car.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CarBillModel } from '../../../model/carbil.model';
@@ -24,6 +24,7 @@ export class Carbillcreat implements OnInit{
     private carService: CarService,
     private formBuilder: FormBuilder,
     private router: Router,
+    private cdr: ChangeDetectorRef
   ){}
 
 
@@ -90,6 +91,7 @@ export class Carbillcreat implements OnInit{
       .subscribe({
         next: res => {
           this.cars = res;
+          this.cdr.markForCheck();
         },
         error: error => {
           console.error('Error loading policies:', error);

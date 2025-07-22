@@ -332,42 +332,35 @@
         "periodFrom": "2025-07-31",
         "periodTo": "2026-07-31"
       }
+    },
+    {
+      "id": "8edb",
+      "fire": 10,
+      "rsd": "",
+      "netPremium": 50000,
+      "tax": ".15",
+      "grossPremium": 57500,
+      "policies": {
+        "id": "8ab2",
+        "billNo": 2,
+        "date": "2025-07-21",
+        "bankName": "Pubali Bank",
+        "policyholder": "Reja Food & Beverise",
+        "address": "Uttara",
+        "sumInsured": 50000,
+        "stockInsured": "Food",
+        "interestInsured": "rrrere",
+        "coverage": "Fire&Lighting only",
+        "location": "Uttara, Sector 4",
+        "construction": "2nd class",
+        "owner": "Reja",
+        "usedAs": "Shop Only",
+        "periodFrom": "2025-07-31",
+        "periodTo": "2026-07-31"
+      }
     }
   ],
   "reciept": [
-    {
-      "id": "b2b7",
-      "issuingOffice": "Narail",
-      "classOfInsurance": "Fire Insurance",
-      "date": "2025-07-13",
-      "modeOfPayment": "Cash",
-      "issuedAgainst": "fsdfsfd",
-      "bill": {
-        "id": "3ad1",
-        "fire": 2,
-        "rsd": 2,
-        "netPremium": 6000000,
-        "tax": ".15",
-        "grossPremium": 6900000,
-        "policies": {
-          "id": "e243",
-          "billNo": 1001,
-          "date": "2024-09-01",
-          "bankName": "Islami Bank Bangladesh PLC, Dhanmondi Branch, Dhaka",
-          "policyholder": "Arif Shop",
-          "address": "lalbagh Roard , Lalabagh Dhaka 1203",
-          "sumInsured": 2000000,
-          "stockInsured": "food",
-          "interestInsured": "Hotel & Restaurants",
-          "location": "Narail, Sadar",
-          "construction": "",
-          "owner": "",
-          "usedAs": "Shop Only",
-          "periodFrom": "",
-          "periodTo": ""
-        }
-      }
-    },
     {
       "id": "a043",
       "issuingOffice": "Rangpur",
@@ -435,10 +428,10 @@
       }
     },
     {
-      "id": "1c9f",
+      "id": "4d0e",
       "issuingOffice": "Dhaka",
       "classOfInsurance": "Fire Insurance",
-      "date": "2025-07-31",
+      "date": "2025-07-19",
       "modeOfPayment": "Cash",
       "issuedAgainst": "dfsdgbdf",
       "bill": {
@@ -468,33 +461,33 @@
       }
     },
     {
-      "id": "4d0e",
+      "id": "00c4",
       "issuingOffice": "Dhaka",
       "classOfInsurance": "Fire Insurance",
-      "date": "2025-07-19",
+      "date": "2025-07-22",
       "modeOfPayment": "Cash",
       "issuedAgainst": "dfsdgbdf",
       "bill": {
-        "id": "ef9f",
+        "id": "462a",
         "fire": 10,
-        "rsd": 10,
-        "netPremium": 1100000,
+        "rsd": null,
+        "netPremium": 50000,
         "tax": ".15",
-        "grossPremium": 1265000,
+        "grossPremium": 57500,
         "policies": {
-          "id": "353a",
-          "billNo": 25,
-          "date": "2025-07-15",
+          "id": "8ab2",
+          "billNo": 2,
+          "date": "2025-07-21",
           "bankName": "Pubali Bank",
-          "policyholder": "Atiq Food House",
-          "address": "Dhanmondi 27",
-          "sumInsured": 100000,
+          "policyholder": "Reja Food & Beverise",
+          "address": "Uttara",
+          "sumInsured": 50000,
           "stockInsured": "Food",
-          "interestInsured": "Resturent & Shop",
-          "location": "Dhanmondi",
+          "interestInsured": "rrrere",
+          "location": "Uttara, Sector 4",
           "construction": "2nd class",
-          "owner": "Atiq",
-          "usedAs": "Shop-Cum-Godown Only",
+          "owner": "Reja",
+          "usedAs": "Shop Only",
           "periodFrom": "2025-07-31",
           "periodTo": "2026-07-31"
         }

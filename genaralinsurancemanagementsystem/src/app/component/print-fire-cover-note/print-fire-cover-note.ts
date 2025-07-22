@@ -3,6 +3,8 @@ import { ReceiptModel } from '../../model/receipt.model';
 import { ReceiptService } from '../../service/receipt.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
+declare var html2pdf: any;
+
 @Component({
   selector: 'app-print-fire-cover-note',
   standalone: false,
@@ -114,6 +116,23 @@ export class PrintFireCoverNote implements OnInit {
 
      isDataLoaded(): boolean {
     return !!this.moneyreceipt;
+  }
+
+  printStatement(): void {
+    const element = document.getElementById('statementTable');
+    const opt = {
+      margin: 0.5,
+      filename: `fire-statement-${this.moneyreceipt.id}.pdf`,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+
+    if (element) {
+      html2pdf().set(opt).from(element).save();
+    } else {
+      alert('Nothing to print!');
+    }
   }
 
 }

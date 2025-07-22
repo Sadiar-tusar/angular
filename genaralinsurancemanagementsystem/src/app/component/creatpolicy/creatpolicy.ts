@@ -35,7 +35,7 @@ formValue!: FormGroup;
       sumInsured: [''],
       stockInsured: [''],
       interestInsured: [''],
-      coverage: [''],
+      coverage: ['Fire & Lightning Only'],
       location: [''],
       construction: [''],
       owner: [ '' ],

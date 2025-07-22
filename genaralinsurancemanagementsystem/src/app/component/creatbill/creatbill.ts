@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { PolicyModel } from '../../model/policy';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BillModel } from '../../model/bill.model';
 import { BilmodelService } from '../../service/bilmodel.service';
 import { PolicymodelService } from '../../service/policymodel.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-creatbill',
@@ -23,6 +23,7 @@ export class Creatbill implements OnInit{
     private policyService: PolicymodelService,
     private formBuilder: FormBuilder,
     private router: Router,
+    private cdr: ChangeDetectorRef
   ){}
   ngOnInit(): void {
    const currentDate = new Date().toISOString().substring(0, 10); // Format as YYYY-MM-DD
@@ -87,6 +88,7 @@ export class Creatbill implements OnInit{
       .subscribe({
         next: res => {
           this.policies = res;
+          this.cdr.markForCheck();
         },
         error: error => {
           console.error('Error loading policies:', error);

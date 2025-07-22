@@ -15,6 +15,7 @@ export class PrintFireMoneyreceipt implements OnInit {
 
   id!:string
   moneyreceipt!: ReceiptModel;
+  // moneyreceipt: ReceiptModel[] = [];
 
   constructor(
     private moneyreceiptService: ReceiptService,
@@ -97,7 +98,7 @@ export class PrintFireMoneyreceipt implements OnInit {
     const element = document.getElementById('statementTable');
     const opt = {
       margin: 0.5,
-      filename: `fire-statement-${this.moneyreceipt.bill?.policies?.id}.pdf`,
+      filename: `fire-statement-${this.moneyreceipt.id}.pdf`,
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2 },
       jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
