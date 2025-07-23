@@ -23,13 +23,16 @@ import { Carbill } from './component/car/carbill/carbill';
 import { Carbillcreat } from './component/car/carbillcreat/carbillcreat';
 import { PrintFireCoverNote } from './component/print-fire-cover-note/print-fire-cover-note';
 import { PrintFireMoneyreceipt } from './component/print-fire-moneyreceipt/print-fire-moneyreceipt';
+import { Logout } from './component/auth/logout/logout';
 
 
 const routes: Routes = [
   {path:'',component: Home},
+  {path:'home',component: Home},
   {path:'dashboard', component:Dashboard},
   {path:'reg', component: Registration},
   {path:'login', component: Login},
+  {path:'logout', component: Logout},
   {path:'userProfile', component: Userprofile},
   {path:'updatepolicy', component: Showallhealthpolicy},
   {path:'health/add', component: Addhealthpolicy},

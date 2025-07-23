@@ -105,7 +105,7 @@
       "email": "sadiar.rahman970@gmail.com",
       "password": "1234",
       "photo": "https://media.istockphoto.com/id/479009182/photo/silhouette-of-a-strong-fighter.jpg?s=612x612&w=0&k=20&c=eqC_1o48WNIxNZIyJrHl8nDLmYC7RtSKq1lJVmDS9GU=",
-      "role": "user"
+      "role": "admin"
     },
     {
       "id": "81a1",
@@ -384,6 +384,32 @@
         "periodFrom": "2025-07-31",
         "periodTo": "2026-07-31"
       }
+    },
+    {
+      "id": "fda0",
+      "fire": 10,
+      "rsd": "",
+      "netPremium": 2000000,
+      "tax": ".15",
+      "grossPremium": 2300000,
+      "policies": {
+        "id": "e243",
+        "billNo": 1001,
+        "date": "2024-09-01",
+        "bankName": "Islami Bank Bangladesh PLC, Dhanmondi Branch, Dhaka",
+        "policyholder": "Rajdhani Resturent , Prop: Md. Raju Chowdhury  ",
+        "address": "lalbagh Roard , Lalabagh Dhaka 1203",
+        "sumInsured": 2000000,
+        "stockInsured": "food",
+        "interestInsured": "Hotel & Restaurants",
+        "coverage": "Fire &/or Lightning only",
+        "location": "185/1 lalbagh Roard , Lalabagh Dhaka 1203",
+        "construction": "2nd Class",
+        "owner": "The Insured",
+        "usedAs": "Shop Only",
+        "periodFrom": "2024-09-01",
+        "periodTo": "2025-09-01"
+      }
     }
   ],
   "reciept": [
@@ -518,6 +544,39 @@
           "periodTo": "2026-07-31"
         }
       }
+    },
+    {
+      "id": "43c6",
+      "issuingOffice": "Dhaka",
+      "classOfInsurance": "Fire Insurance",
+      "date": "2025-07-23",
+      "modeOfPayment": "Cash",
+      "issuedAgainst": "",
+      "bill": {
+        "id": "5e0b",
+        "fire": 2,
+        "rsd": 1,
+        "netPremium": 4000000,
+        "tax": ".15",
+        "grossPremium": 4600000,
+        "policies": {
+          "id": "e243",
+          "billNo": 1001,
+          "date": "2024-09-01",
+          "bankName": "Islami Bank Bangladesh PLC, Dhanmondi Branch, Dhaka",
+          "policyholder": "Rajdhani Resturent , Prop: Md. Raju Chowdhury  ",
+          "address": "lalbagh Roard , Lalabagh Dhaka 1203",
+          "sumInsured": 2000000,
+          "stockInsured": "food",
+          "interestInsured": "Hotel & Restaurants",
+          "location": "185/1 lalbagh Roard , Lalabagh Dhaka 1203",
+          "construction": "2nd Class",
+          "owner": "The Insured",
+          "usedAs": "Shop Only",
+          "periodFrom": "2024-09-01",
+          "periodTo": "2025-09-01"
+        }
+      }
     }
   ],
   "cars": [
@@ -612,5 +671,5 @@
       }
     }
   ],
-  "carreceipt":[]
+  "carreceipt": []
 }

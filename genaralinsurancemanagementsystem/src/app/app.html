@@ -7,8 +7,8 @@
       </div>
       <div class="sidebar-brand-text mx-3 text-warning"><i class="fa-solid fa-house"></i>
 
-        
-        <h4><b>Green General Insurance</b></h4>
+
+        <h4><strong>Green General Insurance</strong></h4>
 
 
       </div>
@@ -31,59 +31,71 @@
     <div class="sidebar-heading">Core</div>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-        aria-controls="collapseTwo">
-        <i class="fa fa-building"></i>
-        <span class="">Policy</span>
-      </a>
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-          <!-- <a class="collapse-item" href="healthbody">Health Insurance</a> -->
-          <a class="collapse-item" href="car">Car Insurance</a>
-          <a class="collapse-item" href="fire">Fire Insurance</a>
-          <!-- <a class="collapse-item" href="units">Travel Insurance</a>
+    <ng-container *ngIf="userRole === 'admin'">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+          aria-controls="collapseTwo">
+          <i class="fa fa-building"></i>
+          <span class="">Policy</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <!-- <a class="collapse-item" href="healthbody">Health Insurance</a> -->
+            <a class="collapse-item" href="car">Car Insurance</a>
+            <a class="collapse-item" href="fire">Fire Insurance</a>
+            <!-- <a class="collapse-item" href="units">Travel Insurance</a>
           <a class="collapse-item" href="rawmaterials">Marine Insurance</a> -->
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
+    </ng-container>
 
-    <div class="sidebar-heading">HR</div>
 
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-        aria-controls="collapseOne">
-        <i class="fas fa-fingerprint"></i>
-        <span class="">Fire Policy</span>
-      </a>
-      <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item" routerLink="viewpolicy">Show Fire Policy</a>
-          
-          <a class="collapse-item" routerLink="viewbill">View Fire Bill</a>
-          
-          <a class="collapse-item" routerLink="createreceipt">Add Fire Receipt</a>
-          <a class="collapse-item" routerLink="viewreciept">View Fire Receipt</a>
+
+
+    <ng-container *ngIf="userRole=== 'admin'">
+
+      <div class="sidebar-heading">HR</div>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+          aria-controls="collapseOne">
+          <i class="fas fa-fingerprint"></i>
+          <span class="">Fire Policy</span>
+        </a>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" routerLink="viewpolicy">Show Fire Policy</a>
+
+            <a class="collapse-item" routerLink="viewbill">View Fire Bill</a>
+
+            <a class="collapse-item" routerLink="createreceipt">Add Fire Receipt</a>
+            <a class="collapse-item" routerLink="viewreciept">View Fire Receipt</a>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
+    </ng-container>
+
     <div class="sidebar-heading">Accountings</div>
 
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
-        aria-controls="collapseThree">
-        <i class="fas fa-fingerprint"></i>
-        <span>Car Policy</span>
-      </a>
-      <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-          <a class="collapse-item" routerLink="viewcarpolicy">Show Car Policy</a>
-          <a class="collapse-item" routerLink="viewcarbil">View Car Bill</a>
-          <a class="collapse-item" routerLink="#">Add Car Receipt</a>
-          <a class="collapse-item" routerLink="#">View Car Receipt</a>
+    <ng-container *ngIf="userRole === 'admin'">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
+          aria-controls="collapseThree">
+          <i class="fas fa-fingerprint"></i>
+          <span>Car Policy</span>
+        </a>
+
+        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" routerLink="viewcarpolicy">Show Car Policy</a>
+            <a class="collapse-item" routerLink="viewcarbil">View Car Bill</a>
+            <a class="collapse-item" routerLink="#">Add Car Receipt</a>
+            <a class="collapse-item" routerLink="#">View Car Receipt</a>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
+    </ng-container>
+
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block" />
@@ -102,6 +114,11 @@
           <i class="fa fa-bars"></i>
         </button>
 
+
+        
+
+
+
         <!-- Topbar Search -->
         <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
           <div class="input-group">
@@ -118,32 +135,43 @@
         <!-- Topbar Navbar -->
         <ul class="navbar-nav ml-auto">
           <!-- Nav Item - Login -->
-          <li class="nav-item">
-            <a class="nav-link text-light" href="login">
-              <i class="fas fa-sign-in-alt"></i>
-              <span>Login</span>
-            </a>
-          </li>
 
-          <!-- Nav Item - Register -->
-          <li class="nav-item">
-            <a class="nav-link text-light" href="reg">
-              <i class="fas fa-user-plus"></i>
-              <span>Register</span>
-            </a>
-          </li>
+
+          <ng-container *ngIf="userRole !== 'admin' && userRole !== 'user'">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="login">
+                <i class="fas fa-sign-in-alt"></i>
+                <span>Login</span>
+              </a>
+            </li>
+
+            <!-- Nav Item - Register -->
+            <li class="nav-item">
+              <a class="nav-link text-light" href="reg">
+                <i class="fas fa-user-plus"></i>
+                <span>Register</span>
+              </a>
+            </li>
+
+          </ng-container>
+
+
 
           <!-- creat bill nav-->
+          <ng-container *ngIf="userRole === 'admin'">
+            <form class="d-flex align-items-center" [formGroup]="routingForm">
+              <!-- <ng-container *ngIf="userRole === 'admin'"> -->
+              <label for="billType" class="text-white me-2 mb-0"><b>Create Bill</b></label>
+              <select class="form-select form-select-sm me-2" formControlName="routing" (change)="visitRouter()"
+                id="billType" style="min-width: 200px;">
+                <option value="" disabled selected>Select Bill</option>
+                <option value="createbill"><b>Fire Bill</b></option>
+                <option value="creatcarbil"><b>Car Bill</b></option>
+              </select>
+              <!-- </ng-container> -->
+            </form>
+          </ng-container>
 
-          <form class="d-flex align-items-center" [formGroup]="routingForm">
-            <label for="billType" class="text-white me-2 mb-0"><b>Create Bill</b></label>
-            <select class="form-select form-select-sm me-2" formControlName="routing" (change)="visitRouter()"
-              id="billType" style="min-width: 200px;">
-              <option value="" disabled selected>Select Bill</option>
-              <option value="createbill"><b>Fire Bill</b></option>
-              <option value="creatcarbil"><b>Car Bill</b></option>
-            </select>
-          </form>
 
 
 
@@ -315,17 +343,24 @@
                 Activity Log
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+              <!-- <a class="dropdown-item" href="/home" data-toggle="modal" data-target="#logoutModal">
                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                 Logout
-              </a>
+              </a> -->
             </div>
           </li>
         </ul>
+        <!-- right side a logout button -->
+        <ng-container *ngIf="userRole==='admin' || userRole === 'user'">
+          <button class="logout-btn btn btn-outline-success" type="submit" routerLink="logout">
+            Logout
+          </button>
+        </ng-container>
+
       </nav>
       <router-outlet />
 
-      <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none"
+      <!-- <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -345,11 +380,11 @@
               <button class="btn btn-secondary" type="button" data-dismiss="modal">
                 Cancel
               </button>
-              <a class="btn btn-primary" href="login.html">Logout</a>
+              <a class="btn btn-primary" href="#">Logout</a>
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">

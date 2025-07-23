@@ -48,7 +48,7 @@ export class Login implements OnInit{
       if (role === 'user') {
         this.router.navigate(['/userProfile']);
       } else if (role === 'admin') {
-        this.router.navigate(['/adminprofile']);
+        this.router.navigate(['/home']);
       } else {
         this.errorMessage = 'Unknown user role.';
       }

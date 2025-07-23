@@ -71,3 +71,51 @@ nav a:hover {
   margin-top: 50px;
   color: #777;
 }
+
+
+
+
+/* Slide-in from Left */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide-in from Right */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Gentle Bounce */
+@keyframes softBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Combined Animation Classes */
+.animate-slide-left {
+  animation: slideInLeft 1s ease-out forwards, softBounce 2s ease-in-out infinite;
+}
+
+.animate-slide-right {
+  animation: slideInRight 1s ease-out forwards, softBounce 2s ease-in-out infinite;
+}
+
+
