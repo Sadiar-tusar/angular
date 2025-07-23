@@ -80,20 +80,7 @@ export class PrintFireMoneyreceipt implements OnInit {
     return !!this.moneyreceipt;
   }
 
-  //  loadReceipts(): void{
-  //   this.moneyreceiptService.getReciptById(id).subscribe({
-  //     next:(res)=>{
-  //       this.moneyreceipt=res;
-  //       this.cdr.markForCheck();
-  //       this.filteredMoneyReceipts=[...this.moneyreceipts];
-  //     },
-  //     error:(err)=>{
-  //       console.log(err);
-  //       alert('Faild to feth receips.Please Try again');
-  //     }
-  //   });
-  // }
-
+  
    printStatement(): void {
     const element = document.getElementById('statementTable');
     const opt = {
@@ -110,4 +97,7 @@ export class PrintFireMoneyreceipt implements OnInit {
       alert('Nothing to print!');
     }
   }
+
+
+
 }

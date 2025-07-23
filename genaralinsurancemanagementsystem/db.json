@@ -114,7 +114,7 @@
       "password": "12345678",
       "photo": "https://img.freepik.com/free-vector/modern-fast-food-composition_23-2147861160.jpg",
       "role": "user",
-      "billNo": "1c9f"
+      "billNo": "a043"
     },
     {
       "id": "85b7",
@@ -358,6 +358,32 @@
         "periodFrom": "2025-07-31",
         "periodTo": "2026-07-31"
       }
+    },
+    {
+      "id": "dce8",
+      "fire": 20,
+      "rsd": "",
+      "netPremium": 100000,
+      "tax": ".15",
+      "grossPremium": 115000,
+      "policies": {
+        "id": "8ab2",
+        "billNo": 2,
+        "date": "2025-07-21",
+        "bankName": "Pubali Bank",
+        "policyholder": "Reja Food & Beverise",
+        "address": "Uttara",
+        "sumInsured": 50000,
+        "stockInsured": "Food",
+        "interestInsured": "rrrere",
+        "coverage": "Fire&Lighting only",
+        "location": "Uttara, Sector 4",
+        "construction": "2nd class",
+        "owner": "Reja",
+        "usedAs": "Shop Only",
+        "periodFrom": "2025-07-31",
+        "periodTo": "2026-07-31"
+      }
     }
   ],
   "reciept": [
@@ -512,6 +538,24 @@
       "usedAs": "Shop-Cum-Godown Only",
       "periodFrom": "2025-07-31",
       "periodTo": "2025-08-31"
+    },
+    {
+      "id": "e7f9",
+      "billNo": 3,
+      "date": "2025-07-23",
+      "bankName": "Islami Bank",
+      "policyholder": "Istiak",
+      "address": "Lalbag",
+      "sumInsured": 20000,
+      "stockInsured": "fhasdjkfkj",
+      "interestInsured": "jkjkjhjh",
+      "coverage": "iutuifyjj",
+      "location": "kjkgjh",
+      "construction": "2nd class",
+      "owner": "",
+      "usedAs": "Shop Only",
+      "periodFrom": "2025-07-23",
+      "periodTo": "2025-10-31"
     }
   ],
   "carbill": [
@@ -540,6 +584,33 @@
         "periodFrom": "2025-07-31",
         "periodTo": "2025-08-31"
       }
+    },
+    {
+      "id": "5a0e",
+      "carRate": 25,
+      "rsd": "",
+      "netPremium": 40000,
+      "tax": ".15",
+      "grossPremium": 46000,
+      "cars": {
+        "id": "e7f9",
+        "billNo": 3,
+        "date": "2025-07-23",
+        "bankName": "Islami Bank",
+        "policyholder": "Istiak",
+        "address": "Lalbag",
+        "sumInsured": 20000,
+        "stockInsured": "fhasdjkfkj",
+        "interestInsured": "jkjkjhjh",
+        "coverage": "iutuifyjj",
+        "location": "kjkgjh",
+        "construction": "2nd class",
+        "owner": "",
+        "usedAs": "Shop Only",
+        "periodFrom": "2025-07-23",
+        "periodTo": "2025-10-31"
+      }
     }
-  ]
+  ],
+  "carreceipt":[]
 }
