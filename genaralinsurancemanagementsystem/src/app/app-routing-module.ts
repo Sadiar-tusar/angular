@@ -24,6 +24,8 @@ import { Carbillcreat } from './component/car/carbillcreat/carbillcreat';
 import { PrintFireCoverNote } from './component/print-fire-cover-note/print-fire-cover-note';
 import { PrintFireMoneyreceipt } from './component/print-fire-moneyreceipt/print-fire-moneyreceipt';
 import { Logout } from './component/auth/logout/logout';
+import { Carreciept } from './component/car/carreciept/carreciept';
+import { Creatcarreciept } from './component/car/creatcarreciept/creatcarreciept';
 
 
 const routes: Routes = [
@@ -53,7 +55,9 @@ const routes: Routes = [
    { path: "viewcarbil", component: Carbill},
    { path: "creatcarbil", component: Carbillcreat},
    { path: "printfirecovernote/:id", component: PrintFireCoverNote},
-   { path: "printmoneyreciept/:id", component: PrintFireMoneyreceipt}
+   { path: "printmoneyreciept/:id", component: PrintFireMoneyreceipt},
+   { path: "viewcarreciept", component: Carreciept},
+   { path: "createcarreceipt", component: Creatcarreciept},
 
   
 

@@ -30,6 +30,8 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { Carbillcreat } from './component/car/carbillcreat/carbillcreat';
 import { PrintFireCoverNote } from './component/print-fire-cover-note/print-fire-cover-note';
 import { PrintFireMoneyreceipt } from './component/print-fire-moneyreceipt/print-fire-moneyreceipt';
+import { Carreciept } from './component/car/carreciept/carreciept';
+import { Creatcarreciept } from './component/car/creatcarreciept/creatcarreciept';
 
 
 
@@ -63,7 +65,9 @@ import { PrintFireMoneyreceipt } from './component/print-fire-moneyreceipt/print
     Carbill,
     Carbillcreat,
     PrintFireCoverNote,
-    PrintFireMoneyreceipt
+    PrintFireMoneyreceipt,
+    Carreciept,
+    Creatcarreciept
    
    
     
