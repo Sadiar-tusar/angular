@@ -392,6 +392,32 @@
         "periodFrom": "2024-09-01",
         "periodTo": "2025-09-01"
       }
+    },
+    {
+      "id": "4f77",
+      "fire": 10,
+      "rsd": "",
+      "netPremium": 50000,
+      "tax": ".15",
+      "grossPremium": 57500,
+      "policies": {
+        "id": "3d1e",
+        "billNo": 12,
+        "date": "2025-07-09",
+        "bankName": "Islami Bank",
+        "policyholder": "Akij Food & Bevarage",
+        "address": "Mohakhali",
+        "sumInsured": "50000",
+        "stockInsured": "Food",
+        "interestInsured": "Hotel & Restaurants",
+        "coverage": "Fire",
+        "location": "12/sfghdf,Mohakhali",
+        "construction": "2nd class",
+        "owner": "The Insured",
+        "usedAs": "Shop Only",
+        "periodFrom": "2025-07-31",
+        "periodTo": "2025-08-30"
+      }
     }
   ],
   "reciept": [
@@ -623,6 +649,39 @@
           "usedAs": "Shop Only",
           "periodFrom": "2024-09-01",
           "periodTo": "2025-09-01"
+        }
+      }
+    },
+    {
+      "id": "5478",
+      "issuingOffice": "Dhaka",
+      "classOfInsurance": "Fire Insurance",
+      "date": "",
+      "modeOfPayment": "Cash",
+      "issuedAgainst": "",
+      "bill": {
+        "id": "462a",
+        "fire": 10,
+        "rsd": null,
+        "netPremium": 50000,
+        "tax": ".15",
+        "grossPremium": 57500,
+        "policies": {
+          "id": "8ab2",
+          "billNo": 2,
+          "date": "2025-07-21",
+          "bankName": "Pubali Bank",
+          "policyholder": "Reja Food & Beverise",
+          "address": "Uttara",
+          "sumInsured": 50000,
+          "stockInsured": "Food",
+          "interestInsured": "rrrere",
+          "location": "Uttara, Sector 4",
+          "construction": "2nd class",
+          "owner": "Reja",
+          "usedAs": "Shop Only",
+          "periodFrom": "2025-07-31",
+          "periodTo": "2026-07-31"
         }
       }
     }
